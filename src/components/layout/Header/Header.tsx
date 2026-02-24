@@ -2,7 +2,7 @@
 import styles from "./Header.module.css";
 import Container from "@/components/ui/Container/Container";
 import Logo from "@/components/ui/Logo/Logo";
-import { Mail, Phone, Menu, X } from "lucide-react";
+import { Mail, Phone, Menu } from "lucide-react";
 import { useState } from "react";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
