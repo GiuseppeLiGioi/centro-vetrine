@@ -18,13 +18,44 @@ export default function MobileNav({ open, onClose, items }: MobileNavProps) {
       </div>
       <div className={styles.containerInner}>
         <div className={styles.listItems}>
-          {/*open &&
-            items.map((item) => (
-                
-              <Link href={item.href   } onClick={onClose}>
-                {item.label}
-              </Link>
-            ))*/}
+          {open &&
+            items.map((item) => {
+              if (item.href) {
+                return (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    onClick={onClose}
+                    className={styles.menuItem}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              }
+
+              if (item.children && item.children.length > 0) {
+                return (
+                  <div key={item.id} className={styles.menuGroup}>
+                    <button className={styles.menuButton}>{item.label}</button>
+
+                    <div className={styles.subMenu}>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.id}
+                          href={child.href!}
+                          onClick={onClose}
+                          className={styles.subMenuItem}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
+              return null;
+            })}
         </div>
       </div>
     </div>

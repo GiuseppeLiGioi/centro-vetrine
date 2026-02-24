@@ -6,6 +6,10 @@ import { Mail, Phone, Menu } from "lucide-react";
 import { useState } from "react";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const onClose = (): void => {
+    setMenuOpen(false);
+  };
   return (
     <header className={styles.containerHeader}>
       <Container>
