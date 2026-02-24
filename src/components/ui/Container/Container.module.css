@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  padding-inline: var(--container-spacing);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--container-spacing-lg);
+  }
+}

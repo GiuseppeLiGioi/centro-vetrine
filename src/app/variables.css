@@ -1,5 +1,13 @@
 :root {
   /* =========================
+     SPACING
+  ========================== */
+
+  --container-max: 1200px;
+  --container-spacing: 16px;
+  --container-spacing-lg: 24px;
+
+  /* =========================
      COLORS
   ========================== */
 
