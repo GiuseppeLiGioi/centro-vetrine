@@ -6,6 +6,7 @@ import { Mail, Phone, Menu } from "lucide-react";
 import { useState } from "react";
 import MobileNav from "@/components/ui/MobileNav/MobileNav";
 import { navigations } from "@/data/navigation";
+import Link from "next/link";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
@@ -14,16 +15,16 @@ export default function Header() {
   };
   return (
     <header className={styles.containerHeader}>
-      <Container>
+      <Container className={styles.containerHeaderWide}>
         <div className={styles.containerInnerHeader}>
           <Logo />
           <div className={styles.contactsMobile}>
-            <a href="tel:3331234567" className={styles.contactA}>
-              <Phone />
-              <span className={styles.contactSpan}>333 1234567</span>
+            <a href="tel:3284595823" className={styles.contactA}>
+              <Phone aria-hidden="true" />
+              <span className={styles.contactSpan}>328 4595823</span>
             </a>
             <a href="mailto:ligioimarco@gmail.com" className={styles.contactA}>
-              <Mail />
+              <Mail aria-hidden="true" />
               <span className={styles.contactSpan}>ligioimarco@gmail.com</span>
             </a>
           </div>
@@ -33,6 +34,9 @@ export default function Header() {
           >
             <Menu />
           </button>
+          <Link href={"/contatti"} className={styles.ctaDesktop}>
+            Contattaci
+          </Link>
         </div>
       </Container>
       {menuOpen && <MobileNav onClose={onClose} items={navigations} />}

@@ -1,0 +1,127 @@
+.navbarLg {
+  display: none;
+  width: 100%;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.containerNavbarLg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  height: 48px;
+  max-width: var(--container-header-max) !important;
+}
+.navItem {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.voiceNavLg {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: inherit;
+  text-decoration: none;
+  font-size: var(--text-md);
+  font-weight: var(--font-medium);
+}
+
+.voiceNavLg:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-bg);
+}
+
+.voiceNavLg:active {
+  background: var(--color-primary-hover);
+  color: var(--color-text);
+}
+.navTrigger {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: var(--text-md);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+
+.navTrigger:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-bg);
+}
+
+.navTrigger:active {
+  background: var(--color-primary-hover);
+  color: var(--color-text);
+}
+.subMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -20;
+  width: 100%;
+  min-width: max-content;
+  padding: var(--space-2);
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-radius: var(--radius-md);
+  flex-direction: column;
+  gap: var(--space-1);
+  z-index: 50;
+}
+
+.navItem:hover .subMenu {
+  display: flex;
+}
+.childItem {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: inherit;
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.childItem:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-bg);
+}
+
+.childItem:active {
+  background: var(--color-primary-hover);
+  color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+  .navbarLg {
+    display: block;
+  }
+
+  .containerNavbarLg {
+    height: 56px;
+    gap: var(--space-5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .containerNavbarLg {
+    height: 64px;
+    gap: var(--space-6);
+  }
+
+  .voiceNavLg,
+  .navTrigger {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+  }
+}

@@ -4,6 +4,12 @@
   padding-inline: var(--container-spacing);
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--container-spacing-md);
+  }
+}
+
 @media (min-width: 1024px) {
   .container {
     padding-inline: var(--container-spacing-lg);
