@@ -1,0 +1,129 @@
+.containerOuter {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.optionsNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  gap: var(--space-3);
+}
+
+.titleMenu {
+  font-size: var(--text-md);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.buttonClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+}
+
+.buttonClose:active {
+  background: var(--color-primary-hover);
+  color: var(--color-text);
+}
+
+.containerInner {
+  padding: var(--space-4);
+}
+
+.listItems {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.menuItem,
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-md);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  text-decoration: none;
+  background: transparent;
+}
+
+.menuButton {
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.menuItem:hover,
+.menuButton:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-bg);
+}
+
+.menuItem:active,
+.menuButton:active {
+  background: var(--color-primary-hover);
+  color: var(--color-text);
+}
+
+.menuGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.subMenu {
+  width: 100%;
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.subMenuItem {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: inherit;
+  text-decoration: none;
+}
+
+.subMenuItem:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-bg);
+}
+
+.subMenuItem:active {
+  background: var(--color-primary-hover);
+  color: var(--color-text);
+}
+
+.buttonClose :global(svg) {
+  width: 22px;
+  height: 22px;
+}

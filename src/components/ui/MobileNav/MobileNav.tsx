@@ -6,11 +6,10 @@ import { X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 type MobileNavProps = {
-  open: boolean;
   onClose: () => void;
   items: NavigationItem[];
 };
-export default function MobileNav({ open, onClose, items }: MobileNavProps) {
+export default function MobileNav({ onClose, items }: MobileNavProps) {
   const [openGroupId, setOpenGroupId] = useState<string | null>(null);
 
   const toggleGroupById = (id: string): void => {
