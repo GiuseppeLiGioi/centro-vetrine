@@ -77,7 +77,7 @@ export default function Footer() {
         <Container className={styles.containerFooterBottom}>
           <div className={styles.legacyInner}>
             <div className={styles.companyLine}>
-              <span>© {new Date().getFullYear()} Centro Vetrine</span>
+              <span>© 2026 Centro Vetrine</span>
               <span className={styles.divider} aria-hidden="true" />
               <span>P.IVA 01234567890</span>
             </div>

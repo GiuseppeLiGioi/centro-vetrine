@@ -1,8 +1,4 @@
 @import "./variables.css";
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 *,
 *::before,
@@ -17,7 +13,7 @@ body {
 
 body {
   margin: 0;
-  background: var(--background);
+  background-color: var(--color-bg);
   color: var(--foreground);
 
   font-family: var(--font-sans);
