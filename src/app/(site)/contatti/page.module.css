@@ -53,7 +53,7 @@
   width: 20px;
   height: 20px;
   flex: 0 0 auto;
-  color: var(--color-text-muted);
+  color: var(--color-primary);
 }
 
 .contactSpan {
@@ -194,7 +194,8 @@
   }
 
   .titleAbout,
-  .titleFaq {
+  .titleFaq,
+  .titleAboutSpan {
     font-size: var(--text-xl);
   }
 }
@@ -220,6 +221,6 @@
   }
 
   .faqsWrapper > * {
-    flex: 1 1 calc(50% - var(--space-5));
+    flex: 1 1 calc(33.333% - var(--space-5));
   }
 }
