@@ -1,18 +1,18 @@
 import { LucideIcon } from "lucide-react";
-import styles from "./InfoCardContact.module.css";
+import styles from "./InfoCard.module.css";
 
-type InfoCardContactProps = {
+type InfoCardProps = {
   title: string;
   text: string;
   icon: LucideIcon;
-  variant?: "default" | "faq";
+  variant?: "default" | "faq" | "history";
 };
-export default function InfoCardContact({
+export default function InfoCard({
   title,
   text,
   icon,
   variant,
-}: InfoCardContactProps) {
+}: InfoCardProps) {
   const IconComponent = icon;
   return (
     <article className={styles.container}>

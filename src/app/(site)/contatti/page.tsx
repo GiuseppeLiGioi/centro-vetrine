@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Container from "@/components/ui/Container/Container";
-import InfoCardContact from "@/components/ui/InfoCardContact/InfoCardContact";
+import InfoCard from "@/components/ui/InfoCard/InfoCard";
 import {
   Phone,
   Mail,
@@ -109,7 +109,7 @@ export default function Contatti() {
 
         <div className={styles.cardsWrapper}>
           {WHY_ITEMS.map((item) => (
-            <InfoCardContact
+            <InfoCard
               key={item.id}
               title={item.title}
               text={item.text}
@@ -124,7 +124,7 @@ export default function Contatti() {
 
         <div className={styles.faqsWrapper}>
           {FAQ_ITEMS.map((item) => (
-            <InfoCardContact
+            <InfoCard
               key={item.id}
               title={item.title}
               text={item.text}
