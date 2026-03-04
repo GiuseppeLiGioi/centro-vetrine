@@ -23,6 +23,7 @@
 .faq {
   flex-direction: row-reverse;
 }
+
 .faq svg {
   margin-left: auto;
 }
@@ -40,36 +41,71 @@
   color: var(--color-text-muted);
   line-height: 1.6;
 }
+
 .history {
   background: var(--color-surface-light);
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
 }
 
+.history .topWrapper {
+  align-items: flex-start;
+}
+
 .history .topWrapper svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
 .history .titleCard {
-  font-weight: var(--font-semibold);
+  font-size: var(--text-lg);
+  line-height: 1.2;
 }
 
-.history .textCard {
-  color: var(--color-text-muted);
-}
 @media (min-width: 768px) {
   .container {
-    padding: var(--space-7);
+    padding: var(--space-6);
+    gap: var(--space-4);
+  }
+
+  .topWrapper svg {
+    width: 22px;
+    height: 22px;
   }
 
   .titleCard {
     font-size: var(--text-lg);
   }
+
+  .textCard {
+    font-size: var(--text-md);
+  }
+
+  .history .topWrapper svg {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 @media (min-width: 1024px) {
   .container {
-    padding: var(--space-8);
+    padding: var(--space-7);
+  }
+
+  .topWrapper svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .titleCard {
+    font-size: var(--text-xl);
+  }
+
+  .textCard {
+    font-size: var(--text-md);
+  }
+
+  .history .topWrapper svg {
+    width: 28px;
+    height: 28px;
   }
 }

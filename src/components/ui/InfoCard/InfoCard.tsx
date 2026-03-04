@@ -14,13 +14,12 @@ export default function InfoCard({
   variant,
 }: InfoCardProps) {
   const IconComponent = icon;
+  const cardVariantClass =
+    variant && variant !== "default" ? styles[variant] : "";
+  const topVariantClass = variant === "faq" ? styles.faq : "";
   return (
-    <article className={styles.container}>
-      <div
-        className={`${styles.topWrapper} ${
-          variant === "faq" ? styles.faq : ""
-        }`}
-      >
+    <article className={` ${styles.container} ${cardVariantClass} `}>
+      <div className={`${styles.topWrapper} ${topVariantClass}`}>
         <IconComponent aria-hidden="true" />
         <h3 className={styles.titleCard}>{title}</h3>
       </div>

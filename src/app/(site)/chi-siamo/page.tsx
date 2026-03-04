@@ -2,40 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Container from "@/components/ui/Container/Container";
 import InfoCard from "@/components/ui/InfoCard/InfoCard";
-import {
-  MapPinCheckInsideIcon,
-  Gem,
-  Handshake,
-  PencilRuler,
-} from "lucide-react";
-
-export const HISTORY_ITEMS = [
-  {
-    id: "radicati-nel-territorio",
-    title: "Radicati nel Territorio",
-    text: "Da oltre 30 anni operiamo a Olbia e in tutta la Sardegna, supportando le attività locali con soluzioni concrete e affidabili.",
-    icon: MapPinCheckInsideIcon,
-  },
-  {
-    id: "artigianato-made-in-italy",
-    title: "Artigianato Made in Italy",
-    text: "Realizziamo arredi e vetrine con materiali italiani selezionati, garantendo qualità, solidità e cura del dettaglio.",
-    icon: Gem,
-  },
-  {
-    id: "soluzioni-su-misura",
-    title: "Soluzioni su Misura",
-    text: "Progettiamo ogni allestimento in base alle esigenze del cliente, valorizzando lo spazio commerciale e l'identità del brand.",
-    icon: PencilRuler,
-  },
-  {
-    id: "esperienza-nel-settore",
-    title: "Esperienza nel Settore",
-    text: "Un know-how consolidato maturato in oltre tre decenni di lavoro nell’arredamento per negozi.",
-    icon: Handshake,
-  },
-];
-
+import { HISTORY_ITEMS } from "@/data/about/historyItems";
+import { HOW_WE_WORK_ITEMS } from "@/data/about/howWeWork";
+import { IconCardItem } from "@/types/types";
 export default function ChiSiamo() {
   return (
     <Container className={styles.containerAbout}>
@@ -72,14 +41,32 @@ export default function ChiSiamo() {
           identità e valorizza al meglio i loro prodotti.
         </p>
         <div className={styles.cards}>
-          {HISTORY_ITEMS.map((item) => (
-            <InfoCard
-              key={item.id}
-              title={item.title}
-              text={item.text}
-              icon={item.icon}
-              variant="history"
-            />
+          {HISTORY_ITEMS.map((item: IconCardItem) => (
+            <div key={item.id} className={styles.card}>
+              <InfoCard
+                title={item.title}
+                text={item.text}
+                icon={item.icon}
+                variant="history"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.howWork}>
+        <h2 className={styles.sectionTitle}>COME LAVORIAMO</h2>
+
+        <div className={styles.cards}>
+          {HOW_WE_WORK_ITEMS.map((item: IconCardItem) => (
+            <div key={item.id} className={styles.card}>
+              <InfoCard
+                title={item.title}
+                text={item.text}
+                icon={item.icon}
+                variant="history"
+              />
+            </div>
           ))}
         </div>
       </section>
