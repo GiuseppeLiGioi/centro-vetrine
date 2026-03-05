@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Container from "@/components/ui/Container/Container";
 import InfoCard from "@/components/ui/InfoCard/InfoCard";
 import { HISTORY_ITEMS } from "@/data/about/historyItems";
-import { HOW_WE_WORK_ITEMS } from "@/data/about/howWeWork";
+import HowWeWorkTimeline from "@/components/ui/HowWeWorkTimeline/HowWeWorkTimeline";
 import { IconCardItem } from "@/types/types";
 export default function ChiSiamo() {
   return (
@@ -56,19 +56,7 @@ export default function ChiSiamo() {
 
       <section className={styles.howWork}>
         <h2 className={styles.sectionTitle}>COME LAVORIAMO</h2>
-
-        <div className={styles.cards}>
-          {HOW_WE_WORK_ITEMS.map((item: IconCardItem) => (
-            <div key={item.id} className={styles.card}>
-              <InfoCard
-                title={item.title}
-                text={item.text}
-                icon={item.icon}
-                variant="history"
-              />
-            </div>
-          ))}
-        </div>
+        <HowWeWorkTimeline />
       </section>
     </Container>
   );

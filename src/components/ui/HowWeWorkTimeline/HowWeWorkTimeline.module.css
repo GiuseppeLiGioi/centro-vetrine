@@ -1,0 +1,172 @@
+.wrapper {
+  margin-top: var(--space-6);
+}
+
+.timelineList {
+  --step-gap: var(--space-5);
+  --dot-size: 28px;
+  --line-width: 1px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--step-gap);
+}
+
+.timelineStep {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-4);
+}
+
+.timelineStep::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--dot-size) / 2);
+  top: calc(var(--dot-size) + var(--space-1));
+  bottom: calc(-1 * var(--step-gap));
+  width: var(--line-width);
+  background: var(--color-border);
+}
+
+.timelineStep:last-child::before {
+  content: none;
+}
+
+.stepNumber {
+  flex: 0 0 auto;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary);
+  color: var(--color-text);
+
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  line-height: 1;
+
+  position: relative;
+  z-index: 1;
+}
+.stepCard {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-4);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  padding: var(--space-5);
+}
+
+.stepCardLeft {
+  flex: 0 0 92px;
+  position: relative;
+
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.stepCardLeft :global(img) {
+  object-fit: cover;
+}
+
+.stepCardRight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.titleCard {
+  margin: 0;
+  font-size: var(--text-md);
+  font-weight: var(--font-semibold);
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+.textCard {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+@media (max-width: 380px) {
+  .stepCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stepCardLeft {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 140px;
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    margin-top: var(--space-7);
+  }
+
+  .timelineList {
+    --step-gap: var(--space-6);
+    --dot-size: 32px;
+  }
+
+  .timelineStep {
+    gap: var(--space-5);
+  }
+
+  .stepNumber {
+    font-size: var(--text-md);
+  }
+
+  .stepCard {
+    padding: var(--space-6);
+    gap: var(--space-5);
+  }
+
+  .stepCardLeft {
+    flex-basis: 112px;
+    border-radius: var(--radius-md);
+  }
+
+  .titleCard {
+    font-size: var(--text-lg);
+  }
+
+  .textCard {
+    font-size: var(--text-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    margin-top: var(--space-8);
+  }
+
+  .stepCard {
+    padding: var(--space-7);
+  }
+
+  .stepCardLeft {
+    flex-basis: 128px;
+  }
+}
