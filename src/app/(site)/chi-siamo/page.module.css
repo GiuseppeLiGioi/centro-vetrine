@@ -1,9 +1,39 @@
 .containerAbout {
   max-width: var(--container-header-max);
   margin: 0 auto;
-  padding: 0 var(--container-spacing);
-  padding-top: var(--space-6);
+  padding: var(--space-6) var(--container-spacing) 0;
 }
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-8) var(--container-spacing);
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
 .title {
   margin: 0 0 var(--space-2);
   font-size: var(--text-2xl);
@@ -23,36 +53,46 @@
 }
 
 .semiTitle {
-  margin: 0 0 var(--space-6);
+  margin: 0;
   font-size: var(--text-md);
   color: var(--color-text-muted);
   line-height: 1.6;
   max-width: 60ch;
 }
-.hero {
-  position: relative;
-  min-height: 50vh;
+
+/* =========================
+   SECTION HEADERS
+========================= */
+
+.sectionTitle,
+.topTitle {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+.description,
+.topDescription {
+  margin: 0;
+  max-width: 65ch;
+  font-size: var(--text-md);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.topSection {
   display: flex;
-  align-items: flex-end;
-  padding: var(--space-8) var(--container-spacing);
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-}
-
-.image {
-  object-fit: cover;
-  object-position: center top;
-}
+/* =========================
+   HISTORY CARDS
+========================= */
 
 .cards {
   display: flex;
@@ -70,14 +110,150 @@
 .card > article {
   width: 100%;
 }
+
+/* =========================
+   HOW WE WORK
+========================= */
+
+.howWork {
+  margin-top: var(--space-9);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* =========================
+   OUR WORK
+========================= */
+
+.ourWork {
+  margin-top: var(--space-9);
+}
+
+.shopCardList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* =========================
+   PARTNER BRANDS
+========================= */
+
+.partnerBrands {
+  margin-top: var(--space-9);
+}
+
+/* =========================
+   PASSION SECTION
+========================= */
+
+.ourPassion {
+  margin-top: var(--space-9);
+  padding-bottom: var(--space-10);
+}
+
+.passionMedia {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-7) var(--space-6);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.passionImage {
+  object-fit: cover;
+}
+
+.passionOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.passionContent {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.passionTitle {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.passionText {
+  margin: 0;
+  font-size: var(--text-md);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* CTA */
+
+.passionCta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-7);
+}
+
+.passionCtaTitle {
+  margin: 0;
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+}
+
+.passionCtaText {
+  margin: 0;
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+}
+
+.passionCtaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 var(--space-6);
+  margin-top: var(--space-3);
+
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-text);
+
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+}
+
+.passionCtaButton:hover {
+  background: var(--color-primary-hover);
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
 @media (max-width: 420px) {
   .card {
     width: 100%;
   }
 }
+
+/* =========================
+   TABLET
+========================= */
+
 @media (min-width: 768px) {
   .containerAbout {
-    padding-top: var(--space-8);
+    padding: var(--space-8) var(--container-spacing-md) 0;
   }
 
   .title {
@@ -86,30 +262,65 @@
 
   .semiTitle {
     font-size: var(--text-lg);
-    margin-bottom: var(--space-7);
+  }
+
+  .sectionTitle,
+  .topTitle {
+    font-size: var(--text-2xl);
   }
 
   .cards {
-    margin-top: var(--space-7);
     gap: var(--space-5);
   }
 
   .card {
     width: calc(50% - (var(--space-5) / 2));
   }
+
+  .shopCardList {
+    gap: var(--space-5);
+  }
+
+  .passionMedia {
+    min-height: 500px;
+  }
 }
 
+/* =========================
+   DESKTOP
+========================= */
+
 @media (min-width: 1024px) {
+  .containerAbout {
+    padding: var(--space-8) var(--container-spacing-lg) 0;
+  }
+
   .image {
     object-position: 80% 25%;
   }
 
   .cards {
     flex-wrap: nowrap;
-    margin-top: var(--space-8);
   }
 
   .card {
     width: calc(25% - (var(--space-5) * 3 / 4));
+  }
+
+  .shopCardList {
+    gap: var(--space-6);
+  }
+
+  .passionMedia {
+    min-height: 560px;
+    padding: var(--space-8);
+  }
+
+  .passionTitle {
+    font-size: var(--text-2xl);
+  }
+
+  .passionCtaTitle {
+    font-size: var(--text-2xl);
   }
 }

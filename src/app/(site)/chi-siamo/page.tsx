@@ -2,6 +2,11 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Container from "@/components/ui/Container/Container";
 import InfoCard from "@/components/ui/InfoCard/InfoCard";
+import ShopCard from "@/components/ui/ShopCard/ShopCard";
+import BrandCard from "@/components/ui/BrandCard/BrandCard";
+import Link from "next/link";
+import { PARTNER_BRANDS } from "@/data/about/BrandItem";
+import { OUR_WORKS } from "@/data/about/ourWork";
 import { HISTORY_ITEMS } from "@/data/about/historyItems";
 import HowWeWorkTimeline from "@/components/ui/HowWeWorkTimeline/HowWeWorkTimeline";
 import { IconCardItem } from "@/types/types";
@@ -10,10 +15,11 @@ export default function ChiSiamo() {
     <Container className={styles.containerAbout}>
       <section className={styles.hero}>
         <Image
-          src={"/manichino.png"}
+          src="/manichino.png"
           alt="Vetrina negozio elegante con manichino"
           fill
           priority
+          sizes="100vw"
           className={styles.image}
         />
         <div className={styles.overlay} />
@@ -30,8 +36,8 @@ export default function ChiSiamo() {
       </section>
 
       <section className={styles.ourHistory}>
-        <h1 className={styles.sectionTitle}>LA NOSTRA STORIA</h1>
-        <p className={styles.description}>
+        <h1 className={styles.topTitle}>LA NOSTRA STORIA</h1>
+        <p className={styles.topDescription}>
           Da oltre 30 anni, <strong>Centro Vetrine</strong> è il punto di
           riferimentoper l'arredamento di negozi a Olbia e in tutta la Sardegna.
           La nsotra storia è fatta di passione, artigianalità e dedizione al
@@ -57,6 +63,76 @@ export default function ChiSiamo() {
       <section className={styles.howWork}>
         <h2 className={styles.sectionTitle}>COME LAVORIAMO</h2>
         <HowWeWorkTimeline />
+      </section>
+
+      <section className={styles.ourWork}>
+        <div className={styles.topSection}>
+          <h2 className={styles.sectionTitle}>I NOSTRI LAVORI</h2>
+          <p className={styles.description}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
+            ipsam beatae corporis iusto.
+          </p>
+        </div>
+        <div className={styles.shopCardList}>
+          {OUR_WORKS.map((w) => (
+            <ShopCard
+              key={w.id}
+              shopName={w.shopName}
+              city={w.city}
+              href={w.href}
+              image={w.image}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.partnerBrands}>
+        <div className={styles.topSection}>
+          <h2 className={styles.sectionTitle}>MARCHI PARTNER</h2>
+          <p className={styles.description}>
+            Collaboriamo solo con marchi di elevata qualità.
+          </p>
+        </div>
+        <div className={styles.shopCardList}>
+          {PARTNER_BRANDS.map((b) => (
+            <BrandCard key={b.id} name={b.name} logo={b.logo} href={b.href} />
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.ourPassion}>
+        <div className={styles.passionMedia}>
+          <Image
+            src="/manichino.png"
+            alt="Interno di negozio arredato da Centro Vetrine"
+            fill
+            className={styles.passionImage}
+            sizes="100vw"
+          />
+          <div className={styles.passionOverlay} />
+
+          <div className={styles.passionContent}>
+            <h2 className={styles.passionTitle}>OLTRE 30 ANNI DI DEDIZIONE</h2>
+            <p className={styles.passionText}>
+              Dal cuore di Olbia, Centro Vetrine è un&apos;azienda familiare che
+              da decenni arreda e rinnova negozi in tutto il territorio sardo,
+              creando ambienti che racchiudono la passione e l&apos;eccellenza
+              del Made in Italy.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.passionCta}>
+          <h3 className={styles.passionCtaTitle}>
+            VUOI DARE NUOVA VITA AL TUO NEGOZIO?
+          </h3>
+          <p className={styles.passionCtaText}>
+            Chiamaci e progettiamo arredi che attirano e convincono.
+          </p>
+          <Link href="tel:+393284566523" className={styles.passionCtaButton}>
+            +39 328 4566523
+          </Link>
+        </div>
       </section>
     </Container>
   );

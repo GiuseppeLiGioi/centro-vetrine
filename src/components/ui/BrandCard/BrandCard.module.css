@@ -1,0 +1,43 @@
+.brandCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 88px;
+  padding: var(--space-4);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  text-decoration: none;
+}
+
+.brandImg {
+  display: block;
+  width: auto;
+  height: 32px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .brandCard {
+    min-height: 96px;
+    padding: var(--space-5);
+  }
+
+  .brandImg {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .brandCard {
+    min-height: 104px;
+    padding: var(--space-6);
+  }
+
+  .brandImg {
+    height: 44px;
+  }
+}
