@@ -2,6 +2,8 @@ import styles from "./page.module.css";
 import Container from "@/components/ui/Container/Container";
 import Image from "next/image";
 import Link from "next/link";
+import CategoryCard from "@/components/ui/CategoryCard/CategoryCard";
+import { categories } from "@/data/home/categories";
 import { Phone, Mail, MoveRight } from "lucide-react";
 export default function Home() {
   return (
@@ -49,6 +51,21 @@ export default function Home() {
         <Link className={styles.buttonSection} href="/chi-siamo">
           Scopri chi siamo
         </Link>
+      </section>
+
+      <section className={styles.categories}>
+        <h2 className={styles.sectionTitle}>Ecco cosa possiamo realizzare</h2>
+
+        <p className={styles.sectionIntro}>
+          Scopri alcune delle soluzioni espositive e di arredamento che possiamo
+          realizzare per il tuo negozio.
+        </p>
+
+        <div className={styles.categoriesList}>
+          {categories.map((c) => (
+            <CategoryCard key={c.id} category={c} />
+          ))}
+        </div>
       </section>
     </Container>
   );
