@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import Container from "@/components/ui/Container/Container";
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MoveRight } from "lucide-react";
 export default function Home() {
   return (
     <Container className={styles.containerHome}>
@@ -31,6 +31,24 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+      <section className={styles.aboutHome}>
+        <h2 className={styles.sectionTitle}>
+          Non conosci ancora Centro Vetrine?
+        </h2>
+
+        <p className={styles.textSection}>
+          Da oltre 30 anni supportiamo i negozi nella realizzazione di
+          allestimenti personalizzati, offrendo esperienza, qualità e consulenza
+          diretta.{" "}
+          <Link href="/contatti" className={styles.contactUs}>
+            Contattaci <MoveRight />
+          </Link>
+        </p>
+
+        <Link className={styles.buttonSection} href="/chi-siamo">
+          Scopri chi siamo
+        </Link>
       </section>
     </Container>
   );
