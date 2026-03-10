@@ -17,7 +17,9 @@ export default function Header() {
     <header className={styles.containerHeader}>
       <Container className={styles.containerHeaderWide}>
         <div className={styles.containerInnerHeader}>
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <div className={styles.contactsMobile}>
             <a href="tel:3284595823" className={styles.contactA}>
               <Phone aria-hidden="true" />

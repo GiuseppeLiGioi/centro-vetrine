@@ -12,10 +12,10 @@
 .title::after {
   content: "";
   display: block;
-  width: 100px;
-  height: 2px;
-  margin-top: var(--space-1);
-  background: var(--color-primary);
+  width: 72px;
+  height: 3px;
+  margin-top: var(--space-3);
+  background-color: var(--color-primary);
 }
 
 .semiTitle {
