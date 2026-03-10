@@ -1,10 +1,10 @@
 .container {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  padding: var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
 }
 
 .topWrapper {
@@ -14,18 +14,10 @@
 }
 
 .topWrapper svg {
+  flex: 0 0 auto;
   width: 20px;
   height: 20px;
   color: var(--color-primary);
-  flex: 0 0 auto;
-}
-
-.faq {
-  flex-direction: row-reverse;
-}
-
-.faq svg {
-  margin-left: auto;
 }
 
 .titleCard {
@@ -38,8 +30,22 @@
 .textCard {
   margin: 0;
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
   line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.faq .topWrapper {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
+.faq .topWrapper svg {
+  margin-left: auto;
+}
+
+.faq .titleCard,
+.faq .textCard {
+  text-align: left;
 }
 
 .history {
@@ -48,7 +54,10 @@
 }
 
 .history .topWrapper {
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
 }
 
 .history .topWrapper svg {
@@ -61,9 +70,12 @@
   line-height: 1.2;
 }
 
+.history .titleCard,
+.history .textCard {
+  text-align: center;
+}
 @media (min-width: 768px) {
   .container {
-    padding: var(--space-6);
     gap: var(--space-4);
   }
 
@@ -85,7 +97,6 @@
     height: 26px;
   }
 }
-
 @media (min-width: 1024px) {
   .container {
     padding: var(--space-7);
@@ -98,10 +109,6 @@
 
   .titleCard {
     font-size: var(--text-xl);
-  }
-
-  .textCard {
-    font-size: var(--text-md);
   }
 
   .history .topWrapper svg {

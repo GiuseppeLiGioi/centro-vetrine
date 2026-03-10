@@ -7,19 +7,19 @@ type InfoCardProps = {
   icon: LucideIcon;
   variant?: "default" | "faq" | "history";
 };
+
 export default function InfoCard({
   title,
   text,
   icon,
-  variant,
+  variant = "default",
 }: InfoCardProps) {
   const IconComponent = icon;
-  const cardVariantClass =
-    variant && variant !== "default" ? styles[variant] : "";
-  const topVariantClass = variant === "faq" ? styles.faq : "";
+  const cardVariantClass = variant !== "default" ? styles[variant] : "";
+
   return (
-    <article className={` ${styles.container} ${cardVariantClass} `}>
-      <div className={`${styles.topWrapper} ${topVariantClass}`}>
+    <article className={`${styles.container} ${cardVariantClass}`}>
+      <div className={styles.topWrapper}>
         <IconComponent aria-hidden="true" />
         <h3 className={styles.titleCard}>{title}</h3>
       </div>

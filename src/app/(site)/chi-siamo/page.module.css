@@ -2,14 +2,14 @@
   max-width: var(--container-header-max);
   margin: 0 auto;
   padding: var(--space-6) var(--container-spacing) 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-8);
 }
-
-/* =========================
-   HERO
-========================= */
-
 .hero {
   position: relative;
+  width: 100%;
   min-height: 50vh;
   display: flex;
   align-items: flex-end;
@@ -54,21 +54,41 @@
 
 .semiTitle {
   margin: 0;
-  font-size: var(--text-md);
-  color: var(--color-text-muted);
-  line-height: 1.6;
   max-width: 60ch;
+  font-size: var(--text-md);
+  line-height: 1.6;
+  color: var(--color-text-muted);
 }
 
-/* =========================
-   SECTION HEADERS
-========================= */
+.semiTitle strong {
+  color: var(--color-text);
+}
+.ourHistory,
+.howWork,
+.ourWork,
+.partnerBrands,
+.ourPassion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-7) var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.ourHistory {
+  align-items: center;
+  text-align: center;
+}
 
 .sectionTitle,
 .topTitle {
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--space-2);
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
+  line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--color-primary);
@@ -83,23 +103,28 @@
   color: var(--color-text-muted);
 }
 
+.topDescription {
+  min-width: 80%;
+  text-align: center;
+}
+
+.description strong,
+.topDescription strong {
+  color: var(--color-text);
+}
+
 .topSection {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
-
-/* =========================
-   HISTORY CARDS
-========================= */
-
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
   align-items: stretch;
-  margin-top: var(--space-6);
+  gap: var(--space-4);
+  margin-top: var(--space-5);
 }
 
 .card {
@@ -110,47 +135,33 @@
 .card > article {
   width: 100%;
 }
-
-/* =========================
-   HOW WE WORK
-========================= */
-
-.howWork {
-  margin-top: var(--space-9);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
-/* =========================
-   OUR WORK
-========================= */
-
-.ourWork {
-  margin-top: var(--space-9);
-}
-
 .shopCardList {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
 }
 
-/* =========================
-   PARTNER BRANDS
-========================= */
-
-.partnerBrands {
-  margin-top: var(--space-9);
+.ourWork .shopCardList {
+  align-items: stretch;
 }
 
-/* =========================
-   PASSION SECTION
-========================= */
+.ourWork .shopCardList > a {
+  display: block;
+  width: 100%;
+}
+
+.partnerBrands .shopCardList {
+  justify-content: center;
+}
+
+.partnerBrands .shopCardList > a {
+  width: calc(50% - (var(--space-4) / 2));
+  display: flex;
+}
 
 .ourPassion {
-  margin-top: var(--space-9);
-  padding-bottom: var(--space-10);
+  gap: var(--space-6);
+  padding-bottom: var(--space-8);
 }
 
 .passionMedia {
@@ -165,6 +176,7 @@
 
 .passionImage {
   object-fit: cover;
+  object-position: center center;
 }
 
 .passionOverlay {
@@ -183,6 +195,7 @@
   margin: 0 0 var(--space-3);
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
+  line-height: 1.2;
   text-transform: uppercase;
   color: var(--color-primary);
 }
@@ -194,25 +207,26 @@
   color: var(--color-text-muted);
 }
 
-/* CTA */
-
 .passionCta {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: var(--space-2);
-  margin-top: var(--space-7);
 }
 
 .passionCtaTitle {
   margin: 0;
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
+  line-height: 1.2;
   color: var(--color-text);
 }
 
 .passionCtaText {
   margin: 0;
   font-size: var(--text-md);
+  line-height: 1.6;
   color: var(--color-text-muted);
 }
 
@@ -220,11 +234,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: var(--space-2);
+
   height: 52px;
   padding: 0 var(--space-6);
   margin-top: var(--space-3);
 
   border-radius: var(--radius-md);
+  border: 1px solid transparent;
+
   background: var(--color-primary);
   color: var(--color-text);
 
@@ -233,27 +251,34 @@
   text-decoration: none;
 }
 
+.passionCtaButton svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.spanPhoneCta {
+  display: inline-block;
+}
+
 .passionCtaButton:hover {
   background: var(--color-primary-hover);
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 420px) {
-  .card {
+  .card,
+  .partnerBrands .shopCardList > a {
     width: 100%;
   }
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (min-width: 768px) {
   .containerAbout {
     padding: var(--space-8) var(--container-spacing-md) 0;
+  }
+
+  .hero {
+    padding: var(--space-9) var(--container-spacing-md);
   }
 
   .title {
@@ -265,11 +290,22 @@
   }
 
   .sectionTitle,
-  .topTitle {
+  .topTitle,
+  .passionTitle,
+  .passionCtaTitle {
     font-size: var(--text-2xl);
   }
 
-  .cards {
+  .ourHistory,
+  .howWork,
+  .ourWork,
+  .partnerBrands,
+  .ourPassion {
+    padding: var(--space-8) var(--space-7);
+  }
+
+  .cards,
+  .shopCardList {
     gap: var(--space-5);
   }
 
@@ -277,18 +313,19 @@
     width: calc(50% - (var(--space-5) / 2));
   }
 
-  .shopCardList {
-    gap: var(--space-5);
+  .ourWork .shopCardList > a:not(:first-child) {
+    width: calc(50% - (var(--space-5) / 2));
+  }
+
+  .partnerBrands .shopCardList > a {
+    width: calc(33.333% - ((var(--space-5) * 2) / 3));
   }
 
   .passionMedia {
     min-height: 500px;
+    padding: var(--space-8);
   }
 }
-
-/* =========================
-   DESKTOP
-========================= */
 
 @media (min-width: 1024px) {
   .containerAbout {
@@ -298,29 +335,34 @@
   .image {
     object-position: 80% 25%;
   }
-
+  .hero,
+  .ourHistory,
+  .ourWork,
+  .ourPassion {
+    width: 100%;
+  }
+  .howWork,
+  .partnerBrands {
+    width: calc(50% - (var(--space-8) / 2));
+  }
   .cards {
     flex-wrap: nowrap;
   }
 
   .card {
-    width: calc(25% - (var(--space-5) * 3 / 4));
+    width: calc(25% - ((var(--space-5) * 3) / 4));
+  }
+  .ourWork .shopCardList > a:first-child {
+    width: 100%;
   }
 
-  .shopCardList {
-    gap: var(--space-6);
+  .ourWork .shopCardList > a:not(:first-child) {
+    width: calc(50% - (var(--space-5) / 2));
   }
-
+  .partnerBrands .shopCardList > a {
+    width: calc(50% - (var(--space-5) / 2));
+  }
   .passionMedia {
     min-height: 560px;
-    padding: var(--space-8);
-  }
-
-  .passionTitle {
-    font-size: var(--text-2xl);
-  }
-
-  .passionCtaTitle {
-    font-size: var(--text-2xl);
   }
 }

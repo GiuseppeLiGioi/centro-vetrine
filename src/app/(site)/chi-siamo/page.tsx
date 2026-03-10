@@ -5,6 +5,7 @@ import InfoCard from "@/components/ui/InfoCard/InfoCard";
 import ShopCard from "@/components/ui/ShopCard/ShopCard";
 import BrandCard from "@/components/ui/BrandCard/BrandCard";
 import Link from "next/link";
+import { Phone } from "lucide-react";
 import { PARTNER_BRANDS } from "@/data/about/BrandItem";
 import { OUR_WORKS } from "@/data/about/ourWork";
 import { HISTORY_ITEMS } from "@/data/about/historyItems";
@@ -64,6 +65,19 @@ export default function ChiSiamo() {
         <h2 className={styles.sectionTitle}>COME LAVORIAMO</h2>
         <HowWeWorkTimeline />
       </section>
+      <section className={styles.partnerBrands}>
+        <div className={styles.topSection}>
+          <h2 className={styles.sectionTitle}>MARCHI PARTNER</h2>
+          <p className={styles.description}>
+            Collaboriamo solo con marchi di elevata qualità.
+          </p>
+        </div>
+        <div className={styles.shopCardList}>
+          {PARTNER_BRANDS.map((b) => (
+            <BrandCard key={b.id} name={b.name} logo={b.logo} href={b.href} />
+          ))}
+        </div>
+      </section>
 
       <section className={styles.ourWork}>
         <div className={styles.topSection}>
@@ -82,20 +96,6 @@ export default function ChiSiamo() {
               href={w.href}
               image={w.image}
             />
-          ))}
-        </div>
-      </section>
-
-      <section className={styles.partnerBrands}>
-        <div className={styles.topSection}>
-          <h2 className={styles.sectionTitle}>MARCHI PARTNER</h2>
-          <p className={styles.description}>
-            Collaboriamo solo con marchi di elevata qualità.
-          </p>
-        </div>
-        <div className={styles.shopCardList}>
-          {PARTNER_BRANDS.map((b) => (
-            <BrandCard key={b.id} name={b.name} logo={b.logo} href={b.href} />
           ))}
         </div>
       </section>
@@ -129,8 +129,9 @@ export default function ChiSiamo() {
           <p className={styles.passionCtaText}>
             Chiamaci e progettiamo arredi che attirano e convincono.
           </p>
-          <Link href="tel:+393284566523" className={styles.passionCtaButton}>
-            +39 328 4566523
+          <Link href="tel:+393284595823" className={styles.passionCtaButton}>
+            <Phone />
+            <span className={styles.spanPhoneCta}>+39 328 4595823</span>
           </Link>
         </div>
       </section>

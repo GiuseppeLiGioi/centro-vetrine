@@ -29,15 +29,12 @@
   padding: var(--space-2);
   border-radius: var(--radius-md);
 }
-
-/* testo contatti: mobile nascosto */
 .contactSpan {
   display: none;
   font-weight: var(--font-medium);
   color: var(--color-text);
 }
 
-/* CTA desktop/tablet: mobile nascosto */
 .ctaDesktop {
   display: none;
   font-weight: var(--font-semibold);
@@ -47,7 +44,6 @@
   border-radius: var(--radius-md);
 }
 
-/* hamburger mobile */
 .btnHamburgher {
   display: inline-flex;
   align-items: center;
@@ -62,14 +58,12 @@
   border-radius: var(--radius-md);
 }
 
-/* icon sizing coerente */
 .contactA :global(svg),
 .btnHamburgher :global(svg) {
   width: 22px;
   height: 22px;
 }
 
-/* ====== md (tablet) ====== */
 @media (min-width: 768px) {
   .containerInnerHeader {
     height: 72px;
