@@ -191,86 +191,142 @@
   flex-direction: column;
   gap: var(--space-5);
 }
-
-@media (min-width: 768px) {
-  .containerHome {
-    padding: var(--space-8) var(--container-spacing-md) 0;
-  }
-  .hero {
-    min-height: 620px;
-    padding: var(--space-9) var(--space-7);
-  }
-
-  .titleHero {
-    font-size: var(--text-3xl);
-  }
-
-  .buttonsHero {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .heroCall,
-  .heroMessage {
-    min-width: 180px;
-  }
-  .aboutHome {
-    gap: var(--space-6);
-    padding: var(--space-9) var(--space-7);
-  }
-
-  .sectionTitle {
-    font-size: var(--text-2xl);
-  }
-
-  .textSection,
-  .sectionIntro {
-    font-size: var(--text-lg);
-  }
-  .categoriesList {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .categoriesList > * {
-    flex: 0 0 calc((100% - var(--space-6)) / 2);
-  }
+.innovation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-8) var(--space-5);
 }
 
-@media (min-width: 1024px) {
-  .containerHome {
-    padding: var(--space-8) var(--container-spacing-lg) 0;
-  }
-  .hero {
-    min-height: 700px;
-    padding: var(--space-10);
-  }
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.finalCta {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-8) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
 
-  .contentHero {
-    max-width: 40rem;
-  }
+.finalCtaImage {
+  object-fit: cover;
+  object-position: center;
+}
 
-  .textHero {
-    font-size: var(--text-lg);
-  }
-  .titleHero::after {
-    width: 96px;
-  }
-  .aboutHome {
-    gap: var(--space-7);
-    padding: var(--space-10) var(--space-8);
-  }
+.finalCtaOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 15, 15, 0.22) 0%,
+      rgba(15, 15, 15, 0.48) 42%,
+      rgba(15, 15, 15, 0.84) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(15, 15, 15, 0.74) 0%,
+      rgba(15, 15, 15, 0.52) 45%,
+      rgba(15, 15, 15, 0.2) 100%
+    );
+  z-index: 1;
+}
 
-  .sectionTitle {
-    font-size: var(--text-3xl);
-  }
+.finalCtaContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
 
-  .textSection,
-  .sectionIntro {
-    max-width: 65ch;
-  }
+.finalCtaTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  line-height: 1.1;
+  text-align: center;
+}
 
-  .categoriesList > * {
-    flex: 0 0 calc((100% - (var(--space-6) * 2)) / 3);
-  }
+.finalCtaText {
+  margin: 0;
+  max-width: 40rem;
+  align-self: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+  line-height: 1.65;
+  text-align: center;
+}
+
+.finalCtaCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.finalCtaCard {
+  flex: 0 0 calc((100% - var(--space-4)) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  background: rgba(26, 26, 26, 0.72);
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+}
+
+.finalCtaCardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: rgba(249, 115, 22, 0.12);
+  color: var(--color-primary);
+}
+
+.finalCtaCardIcon svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.finalCtaCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.finalCtaCardTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--text-md);
+  font-weight: var(--font-semibold);
+  line-height: 1.2;
+}
+
+.finalCtaCardText {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  word-break: break-word;
 }

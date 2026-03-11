@@ -74,6 +74,45 @@
 .history .textCard {
   text-align: center;
 }
+.highlight {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid rgba(249, 115, 22, 0.9);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 0 6px rgba(249, 115, 22, 0.45),
+    0 0 18px rgba(249, 115, 22, 0.25);
+}
+
+.highlight .topWrapper {
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+}
+
+.highlight .topWrapper svg {
+  width: 30px;
+  height: 30px;
+  color: var(--color-primary);
+  filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.55));
+}
+
+.highlight .titleCard {
+  position: relative;
+  z-index: 1;
+  font-size: var(--text-lg);
+  text-align: center;
+}
+
+.highlight .textCard {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
 @media (min-width: 768px) {
   .container {
     gap: var(--space-4);
@@ -96,6 +135,18 @@
     width: 26px;
     height: 26px;
   }
+  .highlight {
+    padding: var(--space-6);
+  }
+
+  .highlight .topWrapper svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .highlight .titleCard {
+    font-size: var(--text-xl);
+  }
 }
 @media (min-width: 1024px) {
   .container {
@@ -114,5 +165,21 @@
   .history .topWrapper svg {
     width: 28px;
     height: 28px;
+  }
+  .highlight {
+    padding: var(--space-7);
+  }
+
+  .highlight .topWrapper svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .highlight .titleCard {
+    font-size: var(--text-xl);
+  }
+
+  .highlight .textCard {
+    font-size: var(--text-md);
   }
 }

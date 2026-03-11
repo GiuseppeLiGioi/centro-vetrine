@@ -3,9 +3,9 @@ import styles from "./InfoCard.module.css";
 
 type InfoCardProps = {
   title: string;
-  text: string;
+  text?: string;
   icon: LucideIcon;
-  variant?: "default" | "faq" | "history";
+  variant?: "default" | "faq" | "history" | "highlight";
 };
 
 export default function InfoCard({

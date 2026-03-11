@@ -27,3 +27,15 @@ export type ourWorkItem = {
     alt: string;
   };
 };
+export type InnovationCard = {
+  title: string;
+  text: string;
+  icon: LucideIcon;
+};
+export type Category = {
+  id: string;
+  title: string;
+  image: string;
+  alt: string;
+  slug: string;
+};

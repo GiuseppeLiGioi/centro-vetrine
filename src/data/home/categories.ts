@@ -1,11 +1,4 @@
-export type Category = {
-  id: string;
-  title: string;
-  image: string;
-  alt: string;
-  slug: string;
-};
-
+import { Category } from "@/types/types";
 export const categories: Category[] = [
   {
     id: "manichini",
