@@ -3,6 +3,7 @@ import Container from "@/components/ui/Container/Container";
 import Image from "next/image";
 import Link from "next/link";
 import CategoryCard from "@/components/ui/CategoryCard/CategoryCard";
+import CardGallery from "@/components/ui/CardGallery/CardGallery";
 import InfoCard from "@/components/ui/InfoCard/InfoCard";
 import { innovationCards } from "@/data/home/innovationCards";
 import { categories } from "@/data/home/categories";
@@ -35,24 +36,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
-      <section className={styles.aboutHome}>
-        <h2 className={styles.sectionTitle}>
-          Non conosci ancora Centro Vetrine?
-        </h2>
-
-        <p className={styles.textSection}>
-          Da oltre 30 anni supportiamo i negozi nella realizzazione di
-          allestimenti personalizzati, offrendo esperienza, qualità e consulenza
-          diretta.{" "}
-          <Link href="/contatti" className={styles.contactUs}>
-            Contattaci <MoveRight />
-          </Link>
-        </p>
-
-        <Link className={styles.buttonSection} href="/chi-siamo">
-          Scopri chi siamo
-        </Link>
       </section>
 
       <section className={styles.categories}>
@@ -91,51 +74,86 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.finalCta}>
-        <Image
-          src="/manichino.png"
-          alt="Interno showroom Centro Vetrine con soluzioni espositive e arredamento per negozi"
-          fill
-          className={styles.finalCtaImage}
-        />
-
-        <div className={styles.finalCtaOverlay} />
-
-        <div className={styles.finalCtaContent}>
-          <h2 className={styles.finalCtaTitle}>
-            Vuoi allestire il tuo negozio?
+      <section className={styles.finalSection}>
+        <div className={styles.aboutHome}>
+          <h2 className={styles.sectionTitle}>
+            Non conosci ancora Centro Vetrine?
           </h2>
 
-          <p className={styles.finalCtaText}>
-            Contattaci per ricevere supporto, informazioni e una consulenza
-            gratuita sulle soluzioni più adatte al tuo punto vendita.
+          <p className={styles.textSection}>
+            Da oltre 30 anni supportiamo i negozi nella realizzazione di
+            allestimenti personalizzati, offrendo esperienza, qualità e
+            consulenza diretta.{" "}
+            <Link href="/contatti" className={styles.contactUs}>
+              Contattaci <MoveRight />
+            </Link>
           </p>
+          <div className={styles.gallery}>
+            <CardGallery
+              src="/manichino.png"
+              alt="allestimento negozi Centro Vetrine"
+            />
+            <CardGallery src="/manichino.png" alt="manichini Centro Vetrine" />
+            <CardGallery src="/manichino.png" alt="stender Centro Vetrine" />
+          </div>
 
-          <div className={styles.finalCtaCards}>
-            <a href="tel:+393284595823" className={styles.finalCtaCard}>
-              <div className={styles.finalCtaCardIcon}>
-                <Phone />
-              </div>
+          <Link className={styles.buttonSection} href="/chi-siamo">
+            Scopri chi siamo <MoveRight />
+          </Link>
+        </div>
 
-              <div className={styles.finalCtaCardContent}>
-                <h3 className={styles.finalCtaCardTitle}>Chiamaci</h3>
-                <p className={styles.finalCtaCardText}>+39 328 459 5823</p>
-              </div>
-            </a>
+        <div className={styles.finalCta}>
+          <Image
+            src="/manichino.png"
+            alt="Interno showroom Centro Vetrine con soluzioni espositive e arredamento per negozi"
+            fill
+            className={styles.finalCtaImage}
+          />
 
-            <a
-              href="mailto:ligioimarco@gmail.com"
-              className={styles.finalCtaCard}
-            >
-              <div className={styles.finalCtaCardIcon}>
-                <Mail />
-              </div>
+          <div className={styles.finalCtaOverlay} />
 
-              <div className={styles.finalCtaCardContent}>
-                <h3 className={styles.finalCtaCardTitle}>Scrivici</h3>
-                <p className={styles.finalCtaCardText}>ligioimarco@gmail.com</p>
-              </div>
-            </a>
+          <div className={styles.finalCtaContent}>
+            <h2 className={styles.finalCtaTitle}>
+              Vuoi allestire il tuo negozio?
+            </h2>
+
+            <p className={styles.finalCtaText}>
+              Contattaci per ricevere supporto, informazioni e una consulenza
+              gratuita sulle soluzioni più adatte al tuo punto vendita.
+            </p>
+
+            <div className={styles.finalCtaCards}>
+              <a href="tel:+393284595823" className={styles.finalCtaCard}>
+                <div className={styles.wrapperCta}>
+                  <div className={styles.finalCtaCardIcon}>
+                    <Phone />
+                  </div>
+
+                  <div className={styles.finalCtaCardContent}>
+                    <h3 className={styles.finalCtaCardTitle}>Chiamaci</h3>
+                    <p className={styles.finalCtaCardText}>328 4595 823</p>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="mailto:ligioimarco@gmail.com"
+                className={styles.finalCtaCard}
+              >
+                <div className={styles.wrapperCta}>
+                  <div className={styles.finalCtaCardIcon}>
+                    <Mail />
+                  </div>
+
+                  <div className={styles.finalCtaCardContent}>
+                    <h3 className={styles.finalCtaCardTitle}>Scrivici</h3>
+                    <p className={styles.finalCtaCardText}>
+                      ligioimarco@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -3,8 +3,7 @@
   margin: 0 auto;
   padding: var(--space-6) var(--container-spacing) 0;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
   gap: var(--space-8);
 }
 .hero {
@@ -28,6 +27,7 @@
 .overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(
       180deg,
@@ -41,7 +41,6 @@
       rgba(15, 15, 15, 0.58) 45%,
       rgba(15, 15, 15, 0.18) 100%
     );
-  z-index: 1;
 }
 
 .contentHero {
@@ -61,6 +60,7 @@
   font-weight: var(--font-bold);
   line-height: 1.1;
 }
+
 .titleHero::after {
   content: "";
   display: block;
@@ -72,6 +72,7 @@
 
 .textHero {
   margin: 0;
+  max-width: 52ch;
   color: var(--color-text-muted);
   font-size: var(--text-md);
   line-height: 1.6;
@@ -93,21 +94,21 @@
   padding: 0 var(--space-5);
   border: 1px solid transparent;
   border-radius: var(--radius-md);
+  text-decoration: none;
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
-  text-decoration: none;
 }
 
 .heroCall {
   background-color: var(--color-primary);
-  color: var(--color-text);
   border-color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .heroMessage {
   background-color: rgba(26, 26, 26, 0.82);
-  color: var(--color-text);
   border-color: var(--color-border);
+  color: var(--color-text);
 }
 
 .heroCall svg,
@@ -120,6 +121,61 @@
 .textButtonsHero {
   line-height: 1;
 }
+.sectionTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  line-height: 1.2;
+}
+
+.sectionIntro,
+.textSection {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+  line-height: 1.65;
+}
+.categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.categoriesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.innovation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-8) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cards > * {
+  width: 100%;
+}
+.finalSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
 .aboutHome {
   width: 100%;
   display: flex;
@@ -129,23 +185,6 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background-color: var(--color-surface);
-}
-
-.sectionTitle {
-  margin: 0;
-  font-size: var(--text-xl);
-  font-weight: var(--font-semibold);
-  color: var(--color-text);
-  line-height: 1.2;
-}
-
-.textSection,
-.sectionIntro {
-  margin: 0;
-  max-width: 60ch;
-  color: var(--color-text-muted);
-  font-size: var(--text-md);
-  line-height: 1.65;
 }
 
 .contactUs {
@@ -166,46 +205,39 @@
 
 .buttonSection {
   align-self: flex-start;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
   padding: 0 var(--space-5);
-  border-radius: var(--radius-md);
   border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
   background-color: var(--color-primary);
   color: var(--color-text);
+  text-decoration: none;
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
-  text-decoration: none;
+  gap: var(--space-2);
 }
-.categories {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
+.buttonSection svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
-
-.categoriesList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-}
-.innovation {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-  border-radius: var(--radius-lg);
-  background-color: var(--color-surface);
-  padding: var(--space-8) var(--space-5);
-}
-
-.cards {
+.gallery {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-3);
+}
+.gallery > * {
+  flex: 0 0 calc((100% - var(--space-3)) / 2);
+  min-width: 0;
+  max-height: 140px;
+}
+
+.gallery > *:last-child {
+  flex-basis: 100%;
 }
 .finalCta {
   position: relative;
@@ -228,20 +260,20 @@
 .finalCtaOverlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(
       180deg,
-      rgba(15, 15, 15, 0.22) 0%,
-      rgba(15, 15, 15, 0.48) 42%,
+      rgba(15, 15, 15, 0.2) 0%,
+      rgba(15, 15, 15, 0.42) 42%,
       rgba(15, 15, 15, 0.84) 100%
     ),
     linear-gradient(
       90deg,
-      rgba(15, 15, 15, 0.74) 0%,
-      rgba(15, 15, 15, 0.52) 45%,
-      rgba(15, 15, 15, 0.2) 100%
+      rgba(15, 15, 15, 0.7) 0%,
+      rgba(15, 15, 15, 0.46) 46%,
+      rgba(15, 15, 15, 0.18) 100%
     );
-  z-index: 1;
 }
 
 .finalCtaContent {
@@ -264,7 +296,7 @@
 
 .finalCtaText {
   margin: 0;
-  max-width: 40rem;
+  max-width: 38rem;
   align-self: center;
   color: var(--color-text-muted);
   font-size: var(--text-md);
@@ -274,51 +306,56 @@
 
 .finalCtaCards {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .finalCtaCard {
-  flex: 0 0 calc((100% - var(--space-4)) / 2);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-4);
-  padding: var(--space-5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-xl);
-  background: rgba(26, 26, 26, 0.72);
-  backdrop-filter: blur(6px);
+  flex: 1;
+  min-width: 0;
   text-decoration: none;
 }
 
+.wrapperCta {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  background-color: rgba(26, 26, 26, 0.72);
+  backdrop-filter: blur(6px);
+}
+
 .finalCtaCardIcon {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
   border-radius: var(--radius-md);
-  background-color: rgba(249, 115, 22, 0.12);
+  background-color: rgba(249, 115, 22, 0.14);
   color: var(--color-primary);
 }
 
 .finalCtaCardIcon svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
 .finalCtaCardContent {
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 
 .finalCtaCardTitle {
   margin: 0;
   color: var(--color-text);
-  font-size: var(--text-md);
+  font-size: var(--text-sm);
   font-weight: var(--font-semibold);
   line-height: 1.2;
 }
@@ -326,7 +363,267 @@
 .finalCtaCardText {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
-  line-height: 1.5;
+  font-size: var(--text-xs);
+  line-height: 1.4;
   word-break: break-word;
+}
+@media (min-width: 768px) {
+  .containerHome {
+    padding: var(--space-8) var(--container-spacing-md) 0;
+    gap: var(--space-9);
+  }
+
+  .hero {
+    min-height: 620px;
+    padding: var(--space-9) var(--space-7);
+  }
+
+  .titleHero {
+    font-size: var(--text-3xl);
+  }
+
+  .textHero {
+    font-size: var(--text-lg);
+  }
+
+  .buttonsHero {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .heroCall,
+  .heroMessage {
+    min-width: 180px;
+  }
+
+  .sectionTitle {
+    font-size: var(--text-2xl);
+  }
+
+  .sectionIntro,
+  .textSection {
+    font-size: var(--text-lg);
+  }
+
+  .categories {
+    gap: var(--space-6);
+  }
+
+  .categoriesList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+  }
+
+  .categoriesList > * {
+    flex: 0 0 calc((100% - var(--space-6)) / 2);
+    min-width: 0;
+  }
+  .buttonSection svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .innovation {
+    gap: var(--space-7);
+    padding: var(--space-9) var(--space-7);
+  }
+
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-5);
+  }
+
+  .cards > * {
+    flex: 0 0 calc((100% - var(--space-5)) / 2);
+    min-width: 0;
+  }
+
+  .aboutHome {
+    gap: var(--space-6);
+    padding: var(--space-9) var(--space-7);
+  }
+  .gallery {
+    gap: var(--space-4);
+  }
+
+  .gallery > * {
+    flex: 0 0 calc((100% - (var(--space-4) * 2)) / 3);
+    max-height: 160px;
+  }
+
+  .gallery > *:last-child {
+    flex-basis: calc((100% - (var(--space-4) * 2)) / 3);
+  }
+
+  .finalSection {
+    gap: var(--space-7);
+  }
+
+  .finalCta {
+    min-height: 620px;
+    padding: var(--space-9) var(--space-7);
+  }
+
+  .finalCtaContent {
+    gap: var(--space-6);
+  }
+
+  .finalCtaTitle {
+    font-size: var(--text-3xl);
+  }
+
+  .finalCtaText {
+    font-size: var(--text-lg);
+  }
+
+  .finalCtaCards {
+    justify-content: center;
+    gap: var(--space-4);
+  }
+
+  .finalCtaCard {
+    max-width: 320px;
+  }
+
+  .wrapperCta {
+    gap: var(--space-4);
+    padding: var(--space-5);
+  }
+
+  .finalCtaCardIcon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .finalCtaCardIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .finalCtaCardTitle {
+    font-size: var(--text-md);
+  }
+
+  .finalCtaCardText {
+    font-size: var(--text-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  .containerHome {
+    padding: var(--space-8) var(--container-spacing-lg) 0;
+    gap: var(--space-10);
+  }
+
+  .hero {
+    min-height: 700px;
+    padding: var(--space-10) var(--space-8);
+  }
+
+  .contentHero {
+    max-width: 40rem;
+  }
+
+  .categoriesList > * {
+    flex: 0 0 calc((100% - (var(--space-6) * 2)) / 3);
+  }
+  .buttonSection svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cards {
+    flex-wrap: nowrap;
+    gap: var(--space-4);
+  }
+
+  .cards > * {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .finalSection {
+    flex-direction: row;
+    align-items: stretch;
+    gap: var(--space-6);
+  }
+
+  .aboutHome {
+    flex: 0 0 38%;
+    padding: var(--space-10) var(--space-8);
+    gap: var(--space-7);
+  }
+  .gallery {
+    gap: var(--space-5);
+  }
+
+  .gallery > * {
+    flex: 0 0 calc((100% - var(--space-5)) / 2);
+    max-height: 180px;
+  }
+
+  .gallery > *:last-child {
+    flex-basis: 100%;
+  }
+
+  .finalCta {
+    flex: 1;
+    min-height: 680px;
+    padding: var(--space-10) var(--space-8);
+  }
+
+  .finalCtaContent {
+    max-width: 720px;
+    margin: 0 auto;
+    gap: var(--space-7);
+  }
+
+  .finalCtaCards {
+    gap: var(--space-5);
+  }
+
+  .finalCtaCard {
+    max-width: 360px;
+  }
+
+  .wrapperCta {
+    padding: var(--space-5) var(--space-6);
+  }
+
+  .finalCtaCardIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .finalCtaCardIcon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .finalCtaCardTitle {
+    font-size: var(--text-lg);
+  }
+}
+@media (min-width: 1440px) {
+  .categoriesList {
+    flex-wrap: nowrap;
+  }
+
+  .categoriesList > * {
+    flex: 1;
+  }
+
+  .finalSection {
+    gap: var(--space-7);
+  }
+
+  .aboutHome {
+    flex-basis: 36%;
+  }
+
+  .finalCtaContent {
+    max-width: 760px;
+  }
 }
