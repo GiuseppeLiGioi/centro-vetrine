@@ -39,3 +39,69 @@ export type Category = {
   alt: string;
   slug: string;
 };
+
+/*types per pagine catalogo */
+export type CategoryPageData = {
+  id: string;
+  slug: string;
+  title: string;
+  breadcrumbLabel: string;
+  hero: {
+    title: string;
+    text: string;
+    image: string;
+    alt: string;
+    ctaLabel: string;
+    ctaHref: string;
+  };
+  reasons: {
+    eyebrow?: string;
+    title: string;
+    text: string;
+    cards: {
+      title: string;
+      text: string;
+      icon?: string;
+    }[];
+  };
+  showcase: {
+    title: string;
+    text: string;
+    images: {
+      src: string;
+      alt: string;
+    }[];
+  };
+  customization: {
+    title: string;
+    text: string;
+    featuredImage: {
+      src: string;
+      alt: string;
+    };
+    gallery: {
+      src: string;
+      alt: string;
+    }[];
+    points: {
+      title: string;
+      text: string;
+    }[];
+  };
+  finalCta: {
+    title: string;
+    text: string;
+    primaryLabel: string;
+    primaryHref: string;
+    secondaryLabel?: string;
+    secondaryHref?: string;
+  };
+};
+
+export type CategoryId =
+  | "manichini"
+  | "arredamento-negozi"
+  | "espositori"
+  | "vetrine"
+  | "accessori"
+  | "stender";
