@@ -61,7 +61,7 @@ export type CategoryPageData = {
     cards: {
       title: string;
       text: string;
-      icon?: string;
+      icon?: LucideIcon;
     }[];
   };
   showcase: {

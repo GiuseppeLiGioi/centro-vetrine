@@ -1,9 +1,28 @@
 import { CategoryPageData, CategoryId } from "@/types/types";
-
+import {
+  Sparkles,
+  LayoutPanelTop,
+  BadgeCheck,
+  Ruler,
+  Palette,
+  Settings2,
+  LayoutGrid,
+  ScanEye,
+  Layers3,
+  Store,
+  CalendarRange,
+  GalleryVerticalEnd,
+  AlignJustify,
+  BadgePercent,
+  Puzzle,
+  RefreshCw,
+  Eye,
+  ClipboardList,
+} from "lucide-react";
 export const categoryPages: Record<CategoryId, CategoryPageData> = {
   manichini: {
     id: "manichini",
-    slug: "/catalogo/manichini",
+    slug: "/manichini",
     title: "Manichini",
     breadcrumbLabel: "Manichini",
     hero: {
@@ -22,17 +41,17 @@ export const categoryPages: Record<CategoryId, CategoryPageData> = {
         {
           title: "Impatto visivo immediato",
           text: "Aiutano a presentare capi, outfit e abbinamenti in modo ordinato, chiaro e coinvolgente.",
-          icon: "sparkles",
+          icon: Sparkles,
         },
         {
           title: "Soluzioni adatte a contesti diversi",
           text: "Dallo store di abbigliamento alla boutique, fino agli allestimenti stagionali e promozionali.",
-          icon: "layout-panel-top",
+          icon: LayoutPanelTop,
         },
         {
           title: "Supporto nella scelta",
           text: "Ti aiutiamo a individuare la soluzione più adatta in base a stile, spazio e tipologia di merce.",
-          icon: "badge-check",
+          icon: BadgeCheck,
         },
       ],
     },
@@ -119,17 +138,17 @@ export const categoryPages: Record<CategoryId, CategoryPageData> = {
         {
           title: "Organizzazione dello spazio",
           text: "Soluzioni pensate per rendere il negozio più leggibile, ordinato e funzionale.",
-          icon: "ruler",
+          icon: Ruler,
         },
         {
           title: "Immagine coordinata",
           text: "Materiali, finiture e linee visive possono essere orientati in funzione dello stile del brand.",
-          icon: "palette",
+          icon: Palette,
         },
         {
           title: "Approccio su misura",
           text: "Ogni proposta viene valutata in base al tipo di attività, agli spazi disponibili e agli obiettivi espositivi.",
-          icon: "settings-2",
+          icon: Settings2,
         },
       ],
     },
@@ -213,17 +232,17 @@ export const categoryPages: Record<CategoryId, CategoryPageData> = {
         {
           title: "Più ordine visivo",
           text: "I prodotti vengono presentati in modo più leggibile e coerente.",
-          icon: "layout-grid",
+          icon: LayoutGrid,
         },
         {
           title: "Maggiore valorizzazione",
           text: "Le aree focali del negozio possono essere organizzate con più impatto e chiarezza.",
-          icon: "scan-eye",
+          icon: ScanEye,
         },
         {
           title: "Versatilità d’uso",
           text: "Adatti a promozioni, capsule, novità stagionali e organizzazione permanente.",
-          icon: "layers-3",
+          icon: Layers3,
         },
       ],
     },
@@ -310,17 +329,17 @@ export const categoryPages: Record<CategoryId, CategoryPageData> = {
         {
           title: "Maggiore impatto",
           text: "La vetrina comunica subito stile, target e valore percepito del punto vendita.",
-          icon: "store",
+          icon: Store,
         },
         {
           title: "Stagionalità e campagne",
           text: "Le soluzioni possono seguire periodi promozionali, collezioni o cambi di assortimento.",
-          icon: "calendar-range",
+          icon: CalendarRange,
         },
         {
           title: "Più coerenza visiva",
           text: "Ogni elemento può essere coordinato con il resto del negozio e con il messaggio commerciale.",
-          icon: "gallery-vertical-end",
+          icon: GalleryVerticalEnd,
         },
       ],
     },
@@ -407,17 +426,17 @@ export const categoryPages: Record<CategoryId, CategoryPageData> = {
         {
           title: "Più ordine",
           text: "Contribuiscono a una disposizione più pulita e più leggibile per il cliente.",
-          icon: "align-justify",
+          icon: AlignJustify,
         },
         {
           title: "Supporto alla vendita",
           text: "Ogni dettaglio può aiutare a valorizzare categorie, promozioni o punti focali del negozio.",
-          icon: "badge-percent",
+          icon: BadgePercent,
         },
         {
           title: "Integrazione semplice",
           text: "Gli accessori si inseriscono facilmente all’interno di configurazioni già esistenti.",
-          icon: "puzzle",
+          icon: Puzzle,
         },
       ],
     },
@@ -495,17 +514,17 @@ export const categoryPages: Record<CategoryId, CategoryPageData> = {
         {
           title: "Flessibilità",
           text: "Perfetti per novità, promozioni, capsule collection o gestione dinamica dello spazio.",
-          icon: "refresh-cw",
+          icon: RefreshCw,
         },
         {
           title: "Lettura immediata del prodotto",
           text: "Aiutano il cliente a visualizzare rapidamente categoria, stile o coordinati espositivi.",
-          icon: "eye",
+          icon: Eye,
         },
         {
           title: "Ordine e praticità",
           text: "Rendono l’area vendita più organizzata e più semplice da gestire ogni giorno.",
-          icon: "clipboard-list",
+          icon: ClipboardList,
         },
       ],
     },

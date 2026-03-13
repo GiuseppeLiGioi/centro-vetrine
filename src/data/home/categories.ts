@@ -5,7 +5,7 @@ export const categories: Category[] = [
     title: "Manichini",
     image: "/manichino.png",
     alt: "Manichini espositivi per negozi di abbigliamento",
-    slug: "/catalogo/manichini",
+    slug: "/manichini",
   },
   {
     id: "arredamento-negozi",
