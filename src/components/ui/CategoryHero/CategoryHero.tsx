@@ -7,7 +7,7 @@ type CategoryHeroProps = {
   data: {
     title: string;
     text: string;
-    image: string;
+    src: string;
     alt: string;
     ctaHref: string;
     ctaLabel: string;
@@ -15,11 +15,11 @@ type CategoryHeroProps = {
 };
 
 export default function CategoryHero({ data }: CategoryHeroProps) {
-  const { title, text, image, alt, ctaHref, ctaLabel } = data;
+  const { title, text, src, alt, ctaHref, ctaLabel } = data;
 
   return (
     <div className={styles.hero}>
-      <Image src={image} alt={alt} fill className={styles.categoryImage} />
+      <Image src={src} alt={alt} fill className={styles.categoryImage} />
       <div className={styles.overlay} />
 
       <div className={styles.breadcrumb}>

@@ -49,7 +49,7 @@ export type CategoryPageData = {
   hero: {
     title: string;
     text: string;
-    image: string;
+    src: string;
     alt: string;
     ctaLabel: string;
     ctaHref: string;
@@ -61,6 +61,8 @@ export type CategoryPageData = {
     cards: {
       title: string;
       text: string;
+      src: string;
+      alt: string;
       icon?: LucideIcon;
     }[];
   };
