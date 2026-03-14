@@ -39,55 +39,49 @@ export const categoryPages = {
         },
       ],
     },
-    showcase: {
-      title: "Esempi di realizzazione",
-      text: "Una selezione visiva per mostrare come i manichini possano integrarsi in ambienti, vetrine e configurazioni espositive differenti.",
-      images: [
-        {
-          src: "/manichino.png",
-          alt: "Manichino in vetrina per negozio di abbigliamento",
-        },
-        {
-          src: "/manichino.png",
-          alt: "Esposizione con manichini in area vendita",
-        },
-        {
-          src: "/manichino.png",
-          alt: "Allestimento coordinato con manichini e accessori",
-        },
-        {
-          src: "/manichino.png",
-          alt: "Configurazione espositiva con manichini professionali",
-        },
-      ],
-    },
     customization: {
-      title: "Personalizzazione completa",
-      text: "Ogni soluzione può essere orientata in base al tuo punto vendita, al tipo di collezione e all’immagine che vuoi trasmettere al cliente finale.",
-      featuredImage: {
+      title: "Consulenza e personalizzazione",
+      text: "Ogni soluzione può essere configurata in base allo spazio del negozio e al tipo di prodotto esposto.",
+      image: {
         src: "/manichino.png",
-        alt: "Configurazione personalizzata di manichini per negozio",
+        alt: "Configurazione manichini",
       },
-      gallery: [
-        { src: "/manichino.png", alt: "Dettaglio finiture manichino" },
-        { src: "/manichino.png", alt: "Manichino in ambientazione retail" },
+      groups: [
         {
-          src: "/manichino.png",
-          alt: "Combinazione espositiva con supporti e manichini",
+          title: "Tipologia",
+          options: [
+            {
+              src: "/manichino-uomo.png",
+              alt: "Manichino uomo",
+              label: "Uomo",
+            },
+            {
+              src: "/manichino-donna.png",
+              alt: "Manichino donna",
+              label: "Donna",
+            },
+            {
+              src: "/manichino-bambino.png",
+              alt: "Manichino bambino",
+              label: "Bambino",
+            },
+          ],
         },
-      ],
-      points: [
         {
-          title: "Stile e presenza visiva",
-          text: "Possibilità di scegliere soluzioni più minimali, eleganti o d’impatto in base al posizionamento del negozio.",
+          title: "Posa",
+          options: [
+            { image: "/posa-classica.png", label: "Classica" },
+            { image: "/posa-dinamica.png", label: "Dinamica" },
+            { image: "/posa-sportiva.png", label: "Sportiva" },
+          ],
         },
         {
-          title: "Adattamento allo spazio",
-          text: "La configurazione può essere pensata per vetrine, ingressi, pareti focali o percorsi interni.",
-        },
-        {
-          title: "Coerenza con l’identità del punto vendita",
-          text: "L’obiettivo è ottenere una presentazione credibile, ordinata e coerente con il tuo brand.",
+          title: "Colori",
+          options: [
+            { image: "/colore-bianco.png", label: "Bianco" },
+            { image: "/colore-nero.png", label: "Nero" },
+            { image: "/colore-carne.png", label: "Carne" },
+          ],
         },
       ],
     },

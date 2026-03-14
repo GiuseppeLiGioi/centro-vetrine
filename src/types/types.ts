@@ -67,28 +67,20 @@ export type CategoryPageData = {
       icon?: LucideIcon;
     }[];
   };
-  showcase: {
-    title: string;
-    text: string;
-    images: {
-      src: string;
-      alt: string;
-    }[];
-  };
   customization: {
     title: string;
     text: string;
-    featuredImage: {
+    image: {
       src: string;
       alt: string;
     };
-    gallery: {
-      src: string;
-      alt: string;
-    }[];
-    points: {
+    groups: {
       title: string;
-      text: string;
+      options: {
+        src: string;
+        alt: string;
+        label: string;
+      }[];
     }[];
   };
   finalCta: {
