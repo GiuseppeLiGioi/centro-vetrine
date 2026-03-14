@@ -143,12 +143,12 @@ export const categoryPages = {
       ],
     },
     finalCta: {
-      title: "Cerchi la soluzione giusta per il tuo negozio?",
-      text: "Contattaci per ricevere supporto nella scelta di manichini, configurazioni espositive e soluzioni adatte al tuo spazio vendita.",
-      primaryLabel: "Contattaci Ora",
+      title: "Cerchi la soluzione espositiva più adatta al tuo negozio?",
+      text: "Possiamo aiutarti a individuare manichini, configurazioni e soluzioni espositive coerenti con il tuo spazio vendita e con l’immagine del tuo negozio.",
+      primaryLabel: "Richiedi Informazioni",
       primaryHref: "/contatti",
       secondaryLabel: "Chiama Ora",
-      secondaryHref: "tel:+390000000000",
+      secondaryHref: "tel:+393284595823",
     },
   },
 };
