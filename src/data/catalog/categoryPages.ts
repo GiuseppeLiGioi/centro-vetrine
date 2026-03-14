@@ -48,39 +48,75 @@ export const categoryPages = {
       },
       groups: [
         {
+          id: "tipologia",
           title: "Tipologia",
           options: [
             {
-              src: "/manichino-uomo.png",
+              id: "uomo",
+              src: "/manichino.png",
               alt: "Manichino uomo",
               label: "Uomo",
             },
             {
-              src: "/manichino-donna.png",
+              id: "donna",
+              src: "/manichino.png",
               alt: "Manichino donna",
               label: "Donna",
             },
             {
-              src: "/manichino-bambino.png",
+              id: "bambino",
+              src: "/manichino.png",
               alt: "Manichino bambino",
               label: "Bambino",
             },
           ],
         },
         {
+          id: "posa",
           title: "Posa",
           options: [
-            { image: "/posa-classica.png", label: "Classica" },
-            { image: "/posa-dinamica.png", label: "Dinamica" },
-            { image: "/posa-sportiva.png", label: "Sportiva" },
+            {
+              id: "classica",
+              src: "/manichino.png",
+              alt: "Manichino in posa classica",
+              label: "Classica",
+            },
+            {
+              id: "dinamica",
+              src: "/manichino.png",
+              alt: "Manichino in posa dinamica",
+              label: "Dinamica",
+            },
+            {
+              id: "sportiva",
+              src: "/manichino.png",
+              alt: "Manichino in posa sportiva",
+              label: "Sportiva",
+            },
           ],
         },
         {
+          id: "colore",
           title: "Colori",
           options: [
-            { image: "/colore-bianco.png", label: "Bianco" },
-            { image: "/colore-nero.png", label: "Nero" },
-            { image: "/colore-carne.png", label: "Carne" },
+            {
+              id: "bianco",
+              src: "/manichino.png",
+              alt: "Manichino colore bianco",
+              label: "Bianco",
+            },
+            {
+              id: "nero",
+              src: "/manichino.png",
+              alt: "Manichino colore nero",
+              label: "Nero",
+            },
+            {
+              id: "carne",
+              src: "/manichino.png",
+              alt: "Manichino colore carne",
+              label: "Carne",
+            },
           ],
         },
       ],
