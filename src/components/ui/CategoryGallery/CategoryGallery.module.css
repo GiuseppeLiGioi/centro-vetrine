@@ -48,6 +48,9 @@
   overflow: hidden;
   background-color: var(--color-surface-light);
 }
+.card:first-child .cardImageWrapper {
+  aspect-ratio: 16 / 10;
+}
 .cardImage {
   object-fit: cover;
   object-position: center;
@@ -73,34 +76,33 @@
   line-height: 1.5;
 }
 @media (min-width: 768px) {
-  .gallerySection {
-    gap: var(--space-5);
-  }
-  .titleSection {
-    font-size: var(--text-3xl);
-  }
-  .textSection {
-    font-size: var(--text-lg);
-    max-width: 68ch;
-  }
   .containerGalleryCards {
     flex-wrap: nowrap;
     gap: var(--space-4);
   }
+
   .card,
   .card:first-child,
   .card:not(:first-child) {
     flex: 1 1 0;
     width: auto;
   }
+
+  .cardImageWrapper,
+  .card:first-child .cardImageWrapper {
+    aspect-ratio: 4 / 5;
+  }
+
   .boxInfoCard {
     gap: var(--space-3);
     padding: var(--space-4);
   }
+
   .titleCard {
     font-size: 1.75rem;
     line-height: 1.1;
   }
+
   .textCard {
     font-size: var(--text-md);
     line-height: 1.6;
@@ -114,7 +116,7 @@
     gap: var(--space-5);
   }
   .titleSection {
-    max-width: 20ch;
+    max-width: 40ch;
   }
   .textSection {
     max-width: 72ch;
