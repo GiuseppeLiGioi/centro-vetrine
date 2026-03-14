@@ -2,6 +2,7 @@ import Container from "@/components/ui/Container/Container";
 import CategoryHero from "@/components/ui/CategoryHero/CategoryHero";
 import CategoryGallery from "@/components/ui/CategoryGallery/CategoryGallery";
 import CategoryCustomization from "@/components/ui/CategoryCustomization/CategoryCustomization";
+import CategoryProcess from "@/components/ui/CategoryProcess/CategoryProcess";
 import { categoryPages } from "@/data/catalog/categoryPages";
 import styles from "./page.module.css";
 export default function Manichini() {
@@ -11,6 +12,7 @@ export default function Manichini() {
       <CategoryHero data={pageData.hero} />
       <CategoryGallery data={pageData.reasons} />
       <CategoryCustomization data={pageData.customization} />
+      <CategoryProcess data={pageData.process} />
     </Container>
   );
 }

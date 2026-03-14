@@ -121,6 +121,27 @@ export const categoryPages = {
         },
       ],
     },
+    process: {
+      title: "Come ti aiutiamo a scegliere i manichini giusti",
+      text: "Ogni negozio ha esigenze diverse. Ti accompagniamo nella scelta dei manichini più adatti valutando spazio espositivo, stile del punto vendita e tipologia di prodotto.",
+      steps: [
+        {
+          id: 1,
+          title: "Analisi dello spazio",
+          text: "Valutiamo insieme la disposizione della vetrina e dell'area vendita per capire dove e come posizionare i manichini in modo efficace.",
+        },
+        {
+          id: 2,
+          title: "Scelta del modello",
+          text: "Ti guidiamo nella selezione tra manichini uomo, donna o bambino, scegliendo stile, posa e finitura più coerenti con il tuo negozio.",
+        },
+        {
+          id: 3,
+          title: "Configurazione finale",
+          text: "Definiamo insieme configurazione, numero e posizionamento dei manichini per ottenere una presentazione ordinata e valorizzare i capi esposti.",
+        },
+      ],
+    },
     finalCta: {
       title: "Cerchi la soluzione giusta per il tuo negozio?",
       text: "Contattaci per ricevere supporto nella scelta di manichini, configurazioni espositive e soluzioni adatte al tuo spazio vendita.",
