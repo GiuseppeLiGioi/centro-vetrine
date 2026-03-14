@@ -17,18 +17,21 @@ export const categoryPages = {
       text: "I manichini non sono semplici supporti espositivi: aiutano a valorizzare il prodotto, migliorano l’impatto visivo della vetrina e rendono più chiara l’identità del punto vendita.",
       cards: [
         {
+          id: 1,
           src: "/manichino.png",
           alt: "Manichino per esposizione in negozio",
           title: "Impatto Visivo",
           text: "Valorizzano capi, abbinamenti e collezioni con una presenza espositiva più forte e ordinata.",
         },
         {
+          id: 2,
           src: "/manichino.png",
           alt: "Manichini per vetrine e spazi vendita",
           title: "Materiali e Stile",
           text: "Disponibili in soluzioni diverse per adattarsi meglio al tono e all’immagine del negozio.",
         },
         {
+          id: 3,
           src: "/manichino.png",
           alt: "Configurazione personalizzata di manichini",
           title: "Progetti su Misura",

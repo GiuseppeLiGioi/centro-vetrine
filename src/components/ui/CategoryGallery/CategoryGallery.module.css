@@ -1,0 +1,131 @@
+.gallerySection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.titleSection {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.textSection {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+  line-height: 1.6;
+}
+.containerGalleryCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  width: 100%;
+}
+.card {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.card:first-child {
+  width: 100%;
+}
+.card:not(:first-child) {
+  width: calc((100% - var(--space-3)) / 2);
+}
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background-color: var(--color-surface-light);
+}
+.cardImage {
+  object-fit: cover;
+  object-position: center;
+}
+.boxInfoCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+}
+.titleCard {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.textCard {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .gallerySection {
+    gap: var(--space-5);
+  }
+  .titleSection {
+    font-size: var(--text-3xl);
+  }
+  .textSection {
+    font-size: var(--text-lg);
+    max-width: 68ch;
+  }
+  .containerGalleryCards {
+    flex-wrap: nowrap;
+    gap: var(--space-4);
+  }
+  .card,
+  .card:first-child,
+  .card:not(:first-child) {
+    flex: 1 1 0;
+    width: auto;
+  }
+  .boxInfoCard {
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+  .titleCard {
+    font-size: 1.75rem;
+    line-height: 1.1;
+  }
+  .textCard {
+    font-size: var(--text-md);
+    line-height: 1.6;
+  }
+}
+@media (min-width: 1024px) {
+  .gallerySection {
+    gap: var(--space-6);
+  }
+  .containerGalleryCards {
+    gap: var(--space-5);
+  }
+  .titleSection {
+    max-width: 20ch;
+  }
+  .textSection {
+    max-width: 72ch;
+  }
+  .boxInfoCard {
+    padding: var(--space-5);
+  }
+  .titleCard {
+    font-size: 2rem;
+  }
+  .textCard {
+    max-width: 28ch;
+  }
+}

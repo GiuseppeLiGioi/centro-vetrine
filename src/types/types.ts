@@ -59,6 +59,7 @@ export type CategoryPageData = {
     title: string;
     text: string;
     cards: {
+      id: string;
       title: string;
       text: string;
       src: string;
