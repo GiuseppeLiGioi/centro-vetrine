@@ -770,9 +770,9 @@ export const categoryPages = {
     title: "Complementi d'Arredo",
     breadcrumbLabel: "Complementi d'Arredo",
     hero: {
-      title: "Complementi d'Arredo",
+      title: "Complementi d'arredo",
       text: "Elementi pensati per completare ambienti commerciali e spazi professionali con soluzioni coerenti, funzionali e curate nei dettagli.",
-      src: "/complementi-arredo.png",
+      src: "/manichino.png",
       alt: "Complementi d'arredo per negozi e uffici",
       ctaLabel: "Richiedi Informazioni",
       ctaHref: "/contatti",
@@ -783,21 +783,21 @@ export const categoryPages = {
       cards: [
         {
           id: 1,
-          src: "/complementi-arredo.png",
+          src: "/manichino.png",
           alt: "Complementi d'arredo per valorizzare gli ambienti",
           title: "Dettagli che Valorizzano",
           text: "Completano lo spazio con elementi che migliorano l’equilibrio visivo e rendono l’ambiente più curato e coerente.",
         },
         {
           id: 2,
-          src: "/complementi-arredo.png",
+          src: "/manichino.png",
           alt: "Complementi d'arredo funzionali",
           title: "Funzione e Presenza",
           text: "Non sono semplici elementi decorativi: aiutano a supportare l’organizzazione e a rafforzare l’identità dell’ambiente.",
         },
         {
           id: 3,
-          src: "/complementi-arredo.png",
+          src: "/manichino.png",
           alt: "Complementi d'arredo scelti su misura",
           title: "Scelta Coerente",
           text: "Ti aiutiamo a individuare i complementi più adatti in base al contesto, allo stile e al risultato finale che vuoi ottenere.",
@@ -808,7 +808,7 @@ export const categoryPages = {
       title: "Consulenza e personalizzazione",
       text: "I complementi vanno scelti con attenzione per integrarsi con l’arredo principale e completare lo spazio senza appesantirlo.",
       image: {
-        src: "/complementi-arredo.png",
+        src: "/manichino.png",
         alt: "Configurazione complementi d'arredo",
       },
       groups: [
@@ -818,19 +818,19 @@ export const categoryPages = {
           options: [
             {
               id: "specchi",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Specchi come complemento d'arredo",
               label: "Specchi",
             },
             {
               id: "sedute",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Sedute come complemento d'arredo",
               label: "Sedute",
             },
             {
               id: "tavolini",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Tavolini come complemento d'arredo",
               label: "Tavolini",
             },
@@ -842,19 +842,19 @@ export const categoryPages = {
           options: [
             {
               id: "negozio",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Complementi d'arredo per negozio",
               label: "Negozio",
             },
             {
               id: "ufficio",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Complementi d'arredo per ufficio",
               label: "Ufficio",
             },
             {
               id: "attesa",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Complementi d'arredo per area attesa",
               label: "Area Attesa",
             },
@@ -866,19 +866,19 @@ export const categoryPages = {
           options: [
             {
               id: "minimal",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Complementi d'arredo stile minimal",
               label: "Minimal",
             },
             {
               id: "moderno",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Complementi d'arredo stile moderno",
               label: "Moderno",
             },
             {
               id: "elegante",
-              src: "/complementi-arredo.png",
+              src: "/manichino.png",
               alt: "Complementi d'arredo stile elegante",
               label: "Elegante",
             },

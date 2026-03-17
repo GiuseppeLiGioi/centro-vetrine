@@ -33,7 +33,7 @@ export const categories: Category[] = [
     title: "Complementi d'arredo",
     image: "/manichino.png",
     alt: "Complementi d'arredo e accessori per negozi e spazi commerciali",
-    slug: "/catalogo/accessori",
+    slug: "/complementi-arredo",
   },
   {
     id: "stender",
