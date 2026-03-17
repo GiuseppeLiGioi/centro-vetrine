@@ -619,7 +619,7 @@ export const categoryPages = {
     hero: {
       title: "Arredamento Negozi",
       text: "Soluzioni studiate per organizzare lo spazio vendita in modo funzionale, valorizzare i prodotti e costruire un ambiente coerente con l’identità del negozio.",
-      src: "/arredamento-negozi.png",
+      src: "/manichino.png",
       alt: "Arredamento professionale per negozi",
       ctaLabel: "Richiedi Informazioni",
       ctaHref: "/contatti",
@@ -630,21 +630,21 @@ export const categoryPages = {
       cards: [
         {
           id: 1,
-          src: "/arredamento-negozi.png",
+          src: "/manichino.png",
           alt: "Arredo negozio per organizzare meglio lo spazio",
           title: "Spazio Più Funzionale",
           text: "Studiamo soluzioni che aiutano a organizzare meglio superfici, percorsi ed esposizione dei prodotti all’interno del negozio.",
         },
         {
           id: 2,
-          src: "/arredamento-negozi.png",
+          src: "/manichino.png",
           alt: "Arredamento negozi coerente con il brand",
           title: "Identità del Punto Vendita",
           text: "Ogni elemento viene scelto per mantenere coerenza tra stile, merce esposta e percezione complessiva del locale.",
         },
         {
           id: 3,
-          src: "/arredamento-negozi.png",
+          src: "/manichino.png",
           alt: "Soluzioni arredamento negozi su misura",
           title: "Progetto su Misura",
           text: "Ti aiutiamo a definire configurazioni, supporti ed elementi d’arredo in base alle esigenze reali del tuo negozio.",
@@ -655,7 +655,7 @@ export const categoryPages = {
       title: "Consulenza e personalizzazione",
       text: "Ogni negozio ha caratteristiche diverse: per questo l’arredo va definito in funzione dello spazio, del prodotto e del tipo di esperienza che si vuole offrire.",
       image: {
-        src: "/arredamento-negozi.png",
+        src: "/manichino.png",
         alt: "Configurazione arredamento negozi",
       },
       groups: [
@@ -665,19 +665,19 @@ export const categoryPages = {
           options: [
             {
               id: "vetrina",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Arredo per zona vetrina",
               label: "Vetrina",
             },
             {
               id: "area-vendita",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Arredo per area vendita",
               label: "Area Vendita",
             },
             {
               id: "cassa",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Arredo per zona cassa",
               label: "Zona Cassa",
             },
@@ -689,19 +689,19 @@ export const categoryPages = {
           options: [
             {
               id: "scaffali",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Scaffali per negozi",
               label: "Scaffali",
             },
             {
               id: "banchi",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Banchi espositivi per negozi",
               label: "Banchi",
             },
             {
               id: "pareti-attrezzate",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Pareti attrezzate per negozi",
               label: "Pareti Attrezzate",
             },
@@ -713,19 +713,19 @@ export const categoryPages = {
           options: [
             {
               id: "essenziale",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Arredo negozio stile essenziale",
               label: "Essenziale",
             },
             {
               id: "moderno",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Arredo negozio stile moderno",
               label: "Moderno",
             },
             {
               id: "materico",
-              src: "/arredamento-negozi.png",
+              src: "/manichino.png",
               alt: "Arredo negozio stile materico",
               label: "Materico",
             },

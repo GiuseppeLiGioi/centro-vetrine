@@ -12,7 +12,7 @@ export const categories: Category[] = [
     title: "Arredamento Negozi",
     image: "/manichino.png",
     alt: "Arredamento professionale per negozi e attività commerciali",
-    slug: "/catalogo/arredamento-negozi",
+    slug: "/arredamento-negozi",
   },
   {
     id: "arredamento-uffici",

@@ -6,8 +6,8 @@ import CategoryProcess from "@/components/ui/CategoryProcess/CategoryProcess";
 import CategoryFinalCta from "@/components/ui/CategoryFinalCta/CategoryFinalCta";
 import { categoryPages } from "@/data/catalog/categoryPages";
 import styles from "./page.module.css";
-export default function VetrineComponibili() {
-  const pageData = categoryPages.vetrine;
+export default function ArredamentoNegozi() {
+  const pageData = categoryPages.arredamentoNegozi;
   return (
     <Container className={styles.categoryPage}>
       <CategoryHero data={pageData.hero} />

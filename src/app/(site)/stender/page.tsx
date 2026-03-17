@@ -6,7 +6,7 @@ import CategoryProcess from "@/components/ui/CategoryProcess/CategoryProcess";
 import CategoryFinalCta from "@/components/ui/CategoryFinalCta/CategoryFinalCta";
 import { categoryPages } from "@/data/catalog/categoryPages";
 import styles from "./page.module.css";
-export default function Manichini() {
+export default function Stender() {
   const pageData = categoryPages.stender;
   return (
     <Container className={styles.categoryPage}>
