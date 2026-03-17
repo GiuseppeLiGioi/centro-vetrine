@@ -26,7 +26,7 @@ export const categories: Category[] = [
     title: "Vetrine Componibili",
     image: "/manichino.png",
     alt: "Allestimento vetrine per negozi e attività commerciali",
-    slug: "/catalogo/vetrine",
+    slug: "/vetrine-componibili",
   },
   {
     id: "complementi-arredo",
