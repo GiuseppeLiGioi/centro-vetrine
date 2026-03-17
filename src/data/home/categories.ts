@@ -19,7 +19,7 @@ export const categories: Category[] = [
     title: "Arredamento Uffici",
     image: "/manichino.png",
     alt: "Arredamento Ufficio professionale per uffici e attività commerciali",
-    slug: "/catalogo/espositori",
+    slug: "/arredamento-uffici",
   },
   {
     id: "vetrine",

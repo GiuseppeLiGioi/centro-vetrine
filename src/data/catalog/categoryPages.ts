@@ -466,7 +466,7 @@ export const categoryPages = {
     hero: {
       title: "Arredamento Ufficio",
       text: "Soluzioni d’arredo pensate per creare ambienti di lavoro ordinati, funzionali e professionali, con attenzione a comfort, immagine e organizzazione degli spazi.",
-      src: "/arredamento-ufficio.png",
+      src: "/manichino.png",
       alt: "Arredamento per uffici professionali",
       ctaLabel: "Richiedi Informazioni",
       ctaHref: "/contatti",
@@ -477,21 +477,21 @@ export const categoryPages = {
       cards: [
         {
           id: 1,
-          src: "/arredamento-ufficio.png",
+          src: "/manichino.png",
           alt: "Arredo ufficio funzionale",
           title: "Funzionalità Quotidiana",
           text: "Scrivanie, contenitori e postazioni vengono scelti per rendere il lavoro più ordinato, pratico e ben distribuito nello spazio.",
         },
         {
           id: 2,
-          src: "/arredamento-ufficio.png",
+          src: "/manichino.png",
           alt: "Ufficio con immagine professionale",
           title: "Immagine Professionale",
           text: "L’arredo contribuisce a comunicare solidità, cura e affidabilità sia a chi lavora negli spazi sia a chi li visita.",
         },
         {
           id: 3,
-          src: "/arredamento-ufficio.png",
+          src: "/manichino.png",
           alt: "Arredamento ufficio su misura",
           title: "Soluzioni Personalizzate",
           text: "Ti supportiamo nella scelta di configurazioni adatte alla metratura, alle funzioni operative e allo stile dell’ambiente.",
@@ -502,7 +502,7 @@ export const categoryPages = {
       title: "Consulenza e personalizzazione",
       text: "Ogni ufficio richiede una distribuzione coerente tra postazioni, contenimento e aree di accoglienza o riunione.",
       image: {
-        src: "/arredamento-ufficio.png",
+        src: "/manichino.png",
         alt: "Configurazione arredamento ufficio",
       },
       groups: [
@@ -512,19 +512,19 @@ export const categoryPages = {
           options: [
             {
               id: "operativo",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Arredo per ufficio operativo",
               label: "Operativo",
             },
             {
               id: "direzionale",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Arredo per ufficio direzionale",
               label: "Direzionale",
             },
             {
               id: "attesa",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Arredo per sala attesa",
               label: "Attesa",
             },
@@ -536,19 +536,19 @@ export const categoryPages = {
           options: [
             {
               id: "scrivanie",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Scrivanie da ufficio",
               label: "Scrivanie",
             },
             {
               id: "contenitori",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Contenitori per ufficio",
               label: "Contenitori",
             },
             {
               id: "sedute",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Sedute per ufficio",
               label: "Sedute",
             },
@@ -560,19 +560,19 @@ export const categoryPages = {
           options: [
             {
               id: "essenziale",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Arredo ufficio finitura essenziale",
               label: "Essenziale",
             },
             {
               id: "moderno",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Arredo ufficio finitura moderna",
               label: "Moderno",
             },
             {
               id: "elegante",
-              src: "/arredamento-ufficio.png",
+              src: "/manichino.png",
               alt: "Arredo ufficio finitura elegante",
               label: "Elegante",
             },
