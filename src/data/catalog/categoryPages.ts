@@ -313,7 +313,7 @@ export const categoryPages = {
     hero: {
       title: "Stender",
       text: "Soluzioni pratiche e professionali per organizzare l’esposizione dei capi in modo ordinato, funzionale e coerente con lo stile del negozio.",
-      src: "/stender.png",
+      src: "/manichino.png",
       alt: "Stender espositivi per negozi",
       ctaLabel: "Richiedi Informazioni",
       ctaHref: "/contatti",
@@ -324,21 +324,21 @@ export const categoryPages = {
       cards: [
         {
           id: 1,
-          src: "/stender.png",
+          src: "/manichino.png",
           alt: "Stender per esposizione capi in negozio",
           title: "Ordine Espositivo",
           text: "Consentono di organizzare capi e collezioni in modo più chiaro, rendendo il percorso in negozio più semplice e leggibile.",
         },
         {
           id: 2,
-          src: "/stender.png",
+          src: "/manichino.png",
           alt: "Stender con finiture diverse",
           title: "Finiture e Materiali",
           text: "Disponibili in vari stili e materiali per integrarsi con l’arredo esistente e con l’identità del punto vendita.",
         },
         {
           id: 3,
-          src: "/stender.png",
+          src: "/manichino.png",
           alt: "Stender configurati su misura per negozi",
           title: "Scelta su Misura",
           text: "Ti aiutiamo a individuare la configurazione più adatta in base a spazio, tipologia di prodotto e flusso del negozio.",
@@ -349,7 +349,7 @@ export const categoryPages = {
       title: "Consulenza e personalizzazione",
       text: "Ogni stender può essere selezionato e configurato in base al tipo di esposizione, alla metratura disponibile e allo stile del punto vendita.",
       image: {
-        src: "/stender.png",
+        src: "/manichino.png",
         alt: "Configurazione stender espositivi",
       },
       groups: [
@@ -359,19 +359,19 @@ export const categoryPages = {
           options: [
             {
               id: "lineare",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender lineare",
               label: "Lineare",
             },
             {
               id: "doppio",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender doppio",
               label: "Doppio",
             },
             {
               id: "con-ripiano",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender con ripiano",
               label: "Con Ripiano",
             },
@@ -383,19 +383,19 @@ export const categoryPages = {
           options: [
             {
               id: "metallo",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender in metallo",
               label: "Metallo",
             },
             {
               id: "legno",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender in legno",
               label: "Legno",
             },
             {
               id: "mix",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender in materiali combinati",
               label: "Mix Materiali",
             },
@@ -407,19 +407,19 @@ export const categoryPages = {
           options: [
             {
               id: "compatto",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender compatto",
               label: "Compatto",
             },
             {
               id: "standard",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender formato standard",
               label: "Standard",
             },
             {
               id: "premium",
-              src: "/stender.png",
+              src: "/manichino.png",
               alt: "Stender con finitura premium",
               label: "Premium",
             },

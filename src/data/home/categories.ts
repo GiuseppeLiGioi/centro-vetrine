@@ -40,6 +40,6 @@ export const categories: Category[] = [
     title: "Stender",
     image: "/manichino.png",
     alt: "Stender per negozi e spazi commerciali",
-    slug: "/catalogo/stender",
+    slug: "/stender",
   },
 ];

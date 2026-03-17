@@ -1,0 +1,21 @@
+.categoryPage {
+  max-width: var(--container-header-max);
+  margin: 0 auto;
+  padding: var(--space-6) var(--container-spacing) 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .categoryPage {
+    padding: var(--space-8) var(--container-spacing-md) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .categoryPage {
+    padding: var(--space-8) var(--container-spacing-lg) 0;
+  }
+}
