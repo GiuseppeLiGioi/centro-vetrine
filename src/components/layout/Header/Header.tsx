@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 import Container from "@/components/ui/Container/Container";
 import Logo from "@/components/ui/Logo/Logo";
 import { Mail, Phone, Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MobileNav from "@/components/ui/MobileNav/MobileNav";
 import { navigations } from "@/data/navigation";
 import Link from "next/link";
@@ -13,6 +13,12 @@ export default function Header() {
   const onClose = (): void => {
     setMenuOpen(false);
   };
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
   return (
     <header className={styles.containerHeader}>
       <Container className={styles.containerHeaderWide}>

@@ -30,10 +30,31 @@ export default function Footer() {
                 Chi Siamo
               </Link>
               <Link href="/contatti" className={styles.navItem}>
-                Catalogo
-              </Link>
-              <Link href="/contatti" className={styles.navItem}>
                 Contatti
+              </Link>
+            </nav>
+          </div>
+
+          <div className={styles.colNav}>
+            <h4 className={styles.semiTitle}>Catalogo</h4>
+            <nav className={styles.navFooter} aria-label="Footer">
+              <Link href="/manichini" className={styles.navItem}>
+                Manichini
+              </Link>
+              <Link href="/arredamento-negozi" className={styles.navItem}>
+                Arredamento Negozi
+              </Link>
+              <Link href="/arredamento-uffici" className={styles.navItem}>
+                Arredamento Uffici
+              </Link>
+              <Link href="/vetrine-componibili" className={styles.navItem}>
+                Vetrine Componibili
+              </Link>
+              <Link href="/stender" className={styles.navItem}>
+                Stender
+              </Link>
+              <Link href="/complementi-arredo" className={styles.navItem}>
+                Complementi d'Arredo
               </Link>
             </nav>
           </div>
@@ -81,6 +102,16 @@ export default function Footer() {
               <span className={styles.divider} aria-hidden="true" />
               <span>P.IVA 01234567890</span>
             </div>
+
+            <nav className={styles.legalNav} aria-label="Link legali">
+              <Link href="/privacy-policy" className={styles.legalLink}>
+                Privacy Policy
+              </Link>
+              <span className={styles.divider} aria-hidden="true" />
+              <Link href="/cookie-policy" className={styles.legalLink}>
+                Cookie Policy
+              </Link>
+            </nav>
           </div>
         </Container>
       </div>

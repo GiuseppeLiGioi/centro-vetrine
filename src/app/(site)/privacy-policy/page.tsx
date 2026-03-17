@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
           In questa pagina trovi le informazioni relative al trattamento dei
           dati personali effettuato tramite il sito web di Centro Vetrine.
         </p>
-        <p className={styles.updated}>Ultimo aggiornamento: [INSERIRE DATA]</p>
+        <p className={styles.updated}>Ultimo aggiornamento: 20/03/2026</p>
       </header>
 
       <div className={styles.content}>
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
           <p className={styles.text}>
             Il titolare del trattamento è{" "}
             <strong>[RAGIONE SOCIALE / NOME ATTIVITÀ]</strong>, con sede in{" "}
-            <strong>[INDIRIZZO COMPLETO]</strong>, P. IVA/C.F.{" "}
+            <strong>Via Mameli 20, Olbia, 07026</strong>, P. IVA/C.F.{" "}
             <strong>[P. IVA O C.F.]</strong>.
           </p>
           <p className={styles.text}>
@@ -30,8 +30,8 @@ export default function PrivacyPolicy() {
             possibile contattare il titolare ai seguenti recapiti:
           </p>
           <ul className={styles.list}>
-            <li>Email: [EMAIL DI CONTATTO]</li>
-            <li>Telefono: [NUMERO DI TELEFONO]</li>
+            <li>Email: ligioimarco@gmail.com</li>
+            <li>Telefono: +39 3284595823</li>
           </ul>
         </section>
 

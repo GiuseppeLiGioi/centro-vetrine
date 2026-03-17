@@ -12,7 +12,7 @@ export default function CookiePolicyPage() {
           e di eventuali strumenti tecnici o servizi di terze parti presenti sul
           sito web di Centro Vetrine.
         </p>
-        <p className={styles.updated}>Ultimo aggiornamento: [INSERIRE DATA]</p>
+        <p className={styles.updated}>Ultimo aggiornamento: 20/03/2026</p>
       </header>
 
       <div className={styles.content}>
@@ -139,8 +139,13 @@ export default function CookiePolicyPage() {
           </p>
           <ul className={styles.list}>
             <li>
-              Google Privacy Policy: [INSERIRE LINK SE LO VUOI RENDERE
-              ESPLICITO]
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy di Google
+              </a>
             </li>
           </ul>
         </section>

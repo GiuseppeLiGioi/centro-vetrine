@@ -1,20 +1,22 @@
 .legalPage {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-8);
   padding-top: var(--space-8);
   padding-bottom: var(--space-10);
 }
-
 .hero {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  max-width: 760px;
+  width: 100%;
   padding-bottom: var(--space-6);
+  margin-bottom: var(--space-3);
   border-bottom: 1px solid var(--color-border);
 }
-
 .eyebrow {
   margin: 0;
   color: var(--color-primary);
@@ -24,7 +26,6 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
-
 .title {
   margin: 0;
   color: var(--color-text);
@@ -33,7 +34,6 @@
   line-height: 1.05;
   text-wrap: balance;
 }
-
 .intro {
   margin: 0;
   max-width: 58ch;
@@ -41,28 +41,28 @@
   font-size: var(--text-md);
   line-height: 1.7;
 }
-
 .updated {
   margin: 0;
   color: var(--color-text-muted);
   font-size: var(--text-sm);
   line-height: 1.5;
 }
-
 .content {
   display: flex;
   flex-direction: column;
   gap: var(--space-7);
   width: 100%;
-  max-width: 820px;
 }
-
 .section {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
 }
-
 .sectionTitle {
   margin: 0;
   color: var(--color-text);
@@ -70,89 +70,87 @@
   font-weight: var(--font-semibold);
   line-height: 1.2;
 }
-
 .text {
   margin: 0;
-  max-width: 68ch;
   color: var(--color-text-muted);
   font-size: var(--text-sm);
   line-height: 1.8;
 }
-
 .list {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
   margin: 0;
   padding-left: 1.25rem;
-  max-width: 68ch;
   color: var(--color-text-muted);
 }
-
 .list li {
   line-height: 1.8;
 }
-
 .text strong,
 .list strong {
   color: var(--color-text);
   font-weight: var(--font-semibold);
 }
-
 @media (min-width: 768px) {
   .legalPage {
     gap: var(--space-9);
     padding-top: var(--space-9);
     padding-bottom: var(--space-12);
   }
-
   .hero {
     gap: var(--space-4);
     padding-bottom: var(--space-7);
+    margin-bottom: var(--space-4);
   }
-
   .eyebrow {
     font-size: var(--text-md);
   }
-
   .intro {
+    max-width: 62ch;
     font-size: var(--text-lg);
   }
-
   .updated {
     font-size: var(--text-md);
   }
-
   .content {
     gap: var(--space-8);
   }
-
   .section {
     gap: var(--space-4);
+    padding: var(--space-6);
   }
-
   .text,
   .list {
     font-size: var(--text-md);
   }
 }
-
 @media (min-width: 1024px) {
   .legalPage {
+    gap: var(--space-10);
     padding-top: var(--space-10);
     padding-bottom: var(--space-14);
   }
-
   .hero {
-    max-width: 820px;
+    gap: var(--space-4);
+    padding-bottom: var(--space-7);
+    margin-bottom: var(--space-5);
   }
-
   .content {
-    max-width: 880px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: var(--space-6);
   }
-
+  .section {
+    flex: 1 1 calc(50% - var(--space-3));
+    max-width: calc(50% - var(--space-3));
+    gap: var(--space-4);
+  }
   .text,
   .list {
-    max-width: 72ch;
+    max-width: none;
   }
 }
