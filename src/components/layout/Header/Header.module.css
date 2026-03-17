@@ -6,7 +6,6 @@
 .containerHeaderWide {
   max-width: var(--container-header-max) !important;
 }
-
 .containerInnerHeader {
   display: flex;
   align-items: center;
@@ -14,13 +13,11 @@
   height: 64px;
   gap: var(--space-3);
 }
-
 .contactsMobile {
   display: flex;
   align-items: center;
   gap: var(--space-3);
 }
-
 .contactA {
   display: inline-flex;
   align-items: center;
@@ -35,7 +32,6 @@
   font-weight: var(--font-medium);
   color: var(--color-text);
 }
-
 .ctaDesktop {
   display: none;
   font-weight: var(--font-semibold);
@@ -44,7 +40,6 @@
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
 }
-
 .btnHamburgher {
   display: inline-flex;
   align-items: center;
@@ -58,13 +53,11 @@
   cursor: pointer;
   border-radius: var(--radius-md);
 }
-
 .contactA :global(svg),
 .btnHamburgher :global(svg) {
   width: 22px;
   height: 22px;
 }
-
 @media (min-width: 768px) {
   .containerInnerHeader {
     height: 72px;
@@ -81,7 +74,6 @@
     cursor: pointer;
     font-size: var(--text-md);
   }
-
   .btnHamburgher {
     display: none;
   }
@@ -93,13 +85,11 @@
     padding-inline: var(--container-spacing-md) !important;
   }
 }
-
 @media (min-width: 1024px) {
   .contactSpan {
     font-size: var(--text-lg);
     font-weight: var(--font-semibold);
   }
-
   .ctaDesktop {
     font-size: var(--text-lg);
   }

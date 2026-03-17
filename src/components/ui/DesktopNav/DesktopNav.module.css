@@ -1,127 +1,150 @@
 .navbarLg {
   display: none;
   width: 100%;
-  background: var(--color-bg);
+  background-color: var(--color-bg);
   color: var(--color-text);
+  border-top: 1px solid var(--color-border);
 }
-
 .containerNavbarLg {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--space-4);
-  height: 48px;
+  height: 52px;
   max-width: var(--container-header-max) !important;
+}
+.voiceNavLg,
+.navTrigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: var(--text-md);
+  font-weight: var(--font-medium);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
 }
 .navItem {
   position: relative;
   display: inline-flex;
   align-items: center;
 }
-
-.voiceNavLg {
-  display: inline-flex;
-  align-items: center;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-md);
-  color: inherit;
-  text-decoration: none;
-  font-size: var(--text-md);
-  font-weight: var(--font-medium);
+.navItem::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 14px;
 }
-
-.voiceNavLg:hover {
-  background: var(--color-primary-soft);
-  color: var(--color-bg);
+.triggerIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--color-primary-soft);
 }
-
-.voiceNavLg:active {
-  background: var(--color-primary-hover);
-  color: var(--color-text);
-}
-.navTrigger {
-  display: inline-flex;
-  align-items: center;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-md);
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font-size: var(--text-md);
-  font-weight: var(--font-medium);
-  cursor: pointer;
-}
-
+.voiceNavLg:hover,
 .navTrigger:hover {
-  background: var(--color-primary-soft);
+  background-color: var(--color-primary-soft);
   color: var(--color-bg);
 }
-
+.voiceNavLg:active,
 .navTrigger:active {
-  background: var(--color-primary-hover);
+  background-color: var(--color-primary-hover);
   color: var(--color-text);
+}
+.navItem:hover .triggerIcon {
+  color: var(--color-bg);
 }
 .subMenu {
   display: none;
   position: absolute;
   top: 100%;
-  left: -20;
-  width: 100%;
-  min-width: max-content;
-  padding: var(--space-2);
-  background: var(--color-text);
-  color: var(--color-bg);
-  border-radius: var(--radius-md);
+  left: 0;
+  margin-top: var(--space-3);
+  min-width: 240px;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
   flex-direction: column;
-  gap: var(--space-1);
+  gap: var(--space-2);
   z-index: 50;
 }
-
 .navItem:hover .subMenu {
   display: flex;
 }
 .childItem {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-sm);
-  color: inherit;
-  text-decoration: none;
+  min-height: 40px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
+  line-height: 1.3;
+  text-decoration: none;
 }
-
 .childItem:hover {
-  background: var(--color-primary-soft);
-  color: var(--color-bg);
+  background-color: var(--color-surface-light);
+  color: var(--color-primary-soft);
 }
-
 .childItem:active {
-  background: var(--color-primary-hover);
+  background-color: var(--color-border);
   color: var(--color-text);
 }
-
 @media (min-width: 768px) {
   .navbarLg {
     display: block;
   }
-
   .containerNavbarLg {
     height: 56px;
     gap: var(--space-5);
   }
-}
-
-@media (min-width: 1024px) {
-  .containerNavbarLg {
-    height: 64px;
-    gap: var(--space-6);
-  }
-
   .voiceNavLg,
   .navTrigger {
+    min-height: 42px;
+  }
+  .triggerIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .containerNavbarLg {
+    height: 60px;
+    gap: var(--space-6);
+  }
+  .voiceNavLg,
+  .navTrigger {
+    min-height: 44px;
+    padding: 0 var(--space-5);
     font-size: var(--text-lg);
     font-weight: var(--font-semibold);
+  }
+  .subMenu {
+    min-width: 260px;
+    padding: var(--space-4);
+    margin-top: var(--space-4);
+  }
+  .navItem::after {
+    height: 16px;
+  }
+  .childItem {
+    min-height: 42px;
+    font-size: var(--text-md);
+  }
+  .triggerIcon {
+    width: 20px;
+    height: 20px;
   }
 }

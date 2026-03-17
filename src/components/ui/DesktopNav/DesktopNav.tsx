@@ -2,13 +2,16 @@ import { NavigationItem } from "@/data/navigation";
 import Container from "@/components/ui/Container/Container";
 import styles from "./DesktopNav.module.css";
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 type DesktopNavProps = {
   items: NavigationItem[];
 };
-
 export default function DesktopNav({ items }: DesktopNavProps) {
   return (
-    <nav className={styles.navbarLg}>
+    <nav
+      className={styles.navbarLg}
+      aria-label="Navigazione principale desktop"
+    >
       <Container className={styles.containerNavbarLg}>
         {items.map((item) => {
           if (item.href) {
@@ -22,12 +25,12 @@ export default function DesktopNav({ items }: DesktopNavProps) {
               </Link>
             );
           }
-
           if (item.children && item.children.length > 0) {
             return (
               <div className={styles.navItem} key={item.id}>
                 <button type="button" className={styles.navTrigger}>
-                  {item.label}
+                  <span>{item.label}</span>
+                  <ChevronDown className={styles.triggerIcon} />
                 </button>
                 <div className={styles.subMenu}>
                   {item.children.map((child) => (
@@ -43,7 +46,6 @@ export default function DesktopNav({ items }: DesktopNavProps) {
               </div>
             );
           }
-
           return null;
         })}
       </Container>
