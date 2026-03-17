@@ -1,8 +1,7 @@
 "use client";
-
 import styles from "./MobileNav.module.css";
 import { NavigationItem } from "@/data/navigation";
-import { X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 type MobileNavProps = {
@@ -11,7 +10,6 @@ type MobileNavProps = {
 };
 export default function MobileNav({ onClose, items }: MobileNavProps) {
   const [openGroupId, setOpenGroupId] = useState<string | null>(null);
-
   const toggleGroupById = (id: string): void => {
     if (openGroupId !== id) {
       setOpenGroupId(id);
@@ -19,12 +17,10 @@ export default function MobileNav({ onClose, items }: MobileNavProps) {
       setOpenGroupId(null);
     }
   };
-
   const handleClose = (): void => {
     setOpenGroupId(null);
     onClose();
   };
-
   return (
     <div className={styles.containerOuter}>
       <div className={styles.optionsNav}>
@@ -37,6 +33,7 @@ export default function MobileNav({ onClose, items }: MobileNavProps) {
         <div className={styles.listItems}>
           {items.map((item) => {
             const isOpen = openGroupId === item.id;
+
             if (item.href) {
               return (
                 <Link
@@ -49,7 +46,6 @@ export default function MobileNav({ onClose, items }: MobileNavProps) {
                 </Link>
               );
             }
-
             if (item.children && item.children.length > 0) {
               return (
                 <div key={item.id} className={styles.menuGroup}>
@@ -59,9 +55,16 @@ export default function MobileNav({ onClose, items }: MobileNavProps) {
                     aria-expanded={isOpen}
                     aria-controls={`submenu-${item.id}`}
                   >
-                    {item.label}
+                    <span>{item.label}</span>
+                    <span
+                      className={`${styles.chevron} ${
+                        isOpen ? styles.chevronOpen : ""
+                      }`}
+                      aria-hidden="true"
+                    >
+                      <ChevronDown />
+                    </span>
                   </button>
-
                   {isOpen && (
                     <div className={styles.subMenu} id={`submenu-${item.id}`}>
                       {item.children.map((child) => (
@@ -79,7 +82,6 @@ export default function MobileNav({ onClose, items }: MobileNavProps) {
                 </div>
               );
             }
-
             return null;
           })}
         </div>
