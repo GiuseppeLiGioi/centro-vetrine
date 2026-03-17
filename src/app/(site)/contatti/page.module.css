@@ -60,69 +60,6 @@
   display: inline-block;
 }
 
-.location {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  margin-bottom: var(--space-8);
-}
-
-.address {
-  margin: 0;
-  font-style: normal;
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-}
-
-.innerLocation {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  padding: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-
-.mapWrapper {
-  width: 100%;
-  height: 190px;
-  border: 1px solid var(--color-border);
-  overflow: hidden;
-}
-
-.mapWrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.mapsLink {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  width: fit-content;
-
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: var(--font-semibold);
-  font-size: var(--text-sm);
-  line-height: 1.4;
-}
-
-.mapsLink svg {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 auto;
-}
-
-.mapsLink:hover {
-  color: var(--color-primary-soft);
-}
-
-.textMap {
-  display: inline-block;
-}
-
 .about,
 .faq {
   margin-top: var(--space-8);
@@ -172,15 +109,6 @@
     width: 22px;
     height: 22px;
   }
-
-  .innerLocation {
-    padding: var(--space-5);
-  }
-
-  .mapWrapper {
-    height: 240px;
-  }
-
   .cardsWrapper,
   .faqsWrapper {
     flex-direction: row;
@@ -207,14 +135,6 @@
 
   .contactsMobile {
     gap: var(--space-8);
-  }
-
-  .location {
-    margin-bottom: var(--space-9);
-  }
-
-  .mapWrapper {
-    height: 280px;
   }
   .cardsWrapper > * {
     flex: 1 1 calc(33.333% - var(--space-5));
