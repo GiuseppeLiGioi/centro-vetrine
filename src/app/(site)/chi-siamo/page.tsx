@@ -93,7 +93,6 @@ export default function ChiSiamo() {
               key={w.id}
               shopName={w.shopName}
               city={w.city}
-              href={w.href}
               image={w.image}
             />
           ))}

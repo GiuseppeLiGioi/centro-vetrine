@@ -54,6 +54,11 @@
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
   line-height: 1.2;
+  transition: color 0.2 ease;
+}
+
+.ctaCard:hover {
+  color: var(--color-primary-hover);
 }
 
 .ctaCard svg {

@@ -1,24 +1,17 @@
 import styles from "./ShopCard.module.css";
 import Image from "next/image";
-import Link from "next/link";
 type ShopCardProps = {
   shopName: string;
   city: string;
-  href: string;
   image: {
     src: string;
     alt: string;
   };
 };
 
-export default function ShopCard({
-  shopName,
-  city,
-  href,
-  image,
-}: ShopCardProps) {
+export default function ShopCard({ shopName, city, image }: ShopCardProps) {
   return (
-    <Link href={href} className={styles.shopCard}>
+    <div className={styles.shopCard}>
       <div className={styles.imageWrapper}>
         <Image src={image.src} className={styles.img} fill alt={image.alt} />
         <div className={styles.infoWork}>
@@ -26,6 +19,6 @@ export default function ShopCard({
           <p className={styles.cityShop}>{city}</p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

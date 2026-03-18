@@ -75,6 +75,10 @@
   font-weight: var(--font-semibold);
   line-height: 1;
   cursor: pointer;
+  transition: color 0.2 ease;
+}
+.buttonOpenMap:hover {
+  background-color: var(--color-primary-hover);
 }
 .mapsLink {
   display: inline-flex;
@@ -90,9 +94,17 @@
   width: 16px;
   height: 16px;
   flex-shrink: 0;
+  transition: color 0.2 ease;
+}
+.mapsLink:hover {
+  color: var(--color-primary-hover);
 }
 .textMap {
   display: inline-block;
+  transition: color 0.2 ease;
+}
+.textMap:hover {
+  color: var(--color-primary-hover);
 }
 @media (min-width: 768px) {
   .location {

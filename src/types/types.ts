@@ -21,7 +21,6 @@ export type ourWorkItem = {
   id: string;
   shopName: string;
   city: string;
-  href: string;
   image: {
     src: string;
     alt: string;

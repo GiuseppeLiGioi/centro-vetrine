@@ -42,7 +42,7 @@ export default function Header() {
           >
             <Menu />
           </button>
-          <Link href={"/contatti"} className={styles.ctaDesktop}>
+          <Link href="/contatti" className={styles.ctaDesktop}>
             Contattaci
           </Link>
         </div>

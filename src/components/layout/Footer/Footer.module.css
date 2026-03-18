@@ -75,7 +75,7 @@
   flex: 0 0 auto;
 }
 .info:hover {
-  color: var(--color-primary-soft);
+  color: var(--color-primary-hover);
 }
 .navFooter,
 .contactsBox {
@@ -98,7 +98,7 @@
 }
 .navItem:hover,
 .contactA:hover {
-  color: var(--color-primary-soft);
+  color: var(--color-primary-hover);
 }
 .contactA {
   display: inline-flex;
@@ -126,7 +126,7 @@
   transition: color 0.2s ease;
 }
 .mapsA:hover {
-  color: var(--color-primary-soft);
+  color: var(--color-primary-hover);
 }
 .legacy {
   border-top: 1px solid var(--color-border);
@@ -159,7 +159,7 @@
   transition: color 0.2s ease;
 }
 .legalLink:hover {
-  color: var(--color-primary-soft);
+  color: var(--color-primary-hover);
 }
 .divider {
   display: none;

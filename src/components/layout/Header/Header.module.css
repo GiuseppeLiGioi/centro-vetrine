@@ -39,6 +39,7 @@
   text-decoration: none;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
+  transition: color 0.2 ease;
 }
 .btnHamburgher {
   display: inline-flex;
@@ -73,6 +74,9 @@
     background-color: var(--color-surface-light);
     cursor: pointer;
     font-size: var(--text-md);
+  }
+  .ctaDesktop:hover {
+    background-color: var(--color-surface);
   }
   .btnHamburgher {
     display: none;
