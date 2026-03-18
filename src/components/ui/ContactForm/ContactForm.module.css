@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: var(--space-5);
   margin: var(--space-9) 0;
+  scroll-margin-top: 120px;
 }
 
 .sectionTitle {
@@ -169,6 +170,12 @@ select.input {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   color: var(--color-placeholder);
+}
+.fieldError {
+  margin: var(--space-2) 0 0;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+  line-height: 1.4;
 }
 
 @media (min-width: 768px) {

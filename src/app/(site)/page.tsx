@@ -28,11 +28,13 @@ export default function Home() {
           <div className={styles.buttonsHero}>
             <a href="tel:+39 3284595823" className={styles.heroCall}>
               <Phone />
-              <span className={styles.textButtonsHero}>CHIAMA ORA</span>
+              <span className={styles.textButtonsHero}>Chiama Ora</span>
             </a>
-            <Link href="/contatti" className={styles.heroMessage}>
+            <Link href="/contatti#contact-form" className={styles.heroMessage}>
               <Mail />
-              <span className={styles.textButtonsHero}>Scrivici</span>
+              <span className={styles.textButtonsHero}>
+                Richiedi Informazioni
+              </span>
             </Link>
           </div>
         </div>
@@ -130,7 +132,7 @@ export default function Home() {
                   </div>
 
                   <div className={styles.finalCtaCardContent}>
-                    <h3 className={styles.finalCtaCardTitle}>Chiamaci</h3>
+                    <h3 className={styles.finalCtaCardTitle}>Chiama Ora</h3>
                     <p className={styles.finalCtaCardText}>328 4595 823</p>
                   </div>
                 </div>

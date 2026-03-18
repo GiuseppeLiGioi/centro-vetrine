@@ -6,12 +6,33 @@ import { Send } from "lucide-react";
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("mreajyap");
   const [showSuccess, setShowSuccess] = useState(false);
-
+  const [nameError, setNameError] = useState("");
+  const [messageError, setMessageError] = useState("");
   const hasErrors: boolean =
     Array.isArray(state.errors) &&
     state.errors.length > 0 &&
     !showSuccess &&
     !state.submitting;
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name")?.toString().trim() || "";
+    const message = formData.get("message")?.toString().trim() || "";
+
+    setNameError(name.length >= 3 ? "" : "Inserisci un nome valido.");
+    setMessageError(
+      message.length >= 10
+        ? ""
+        : "Inserisci un messaggio di almeno 10 caratteri.",
+    );
+
+    if (name.length < 2 || message.length < 10) {
+      event.preventDefault();
+      return;
+    }
+
+    handleSubmit(event);
+  };
 
   useEffect(() => {
     if (!state.succeeded) return;
@@ -28,7 +49,7 @@ export default function ContactForm() {
   }, [state.succeeded]);
 
   return (
-    <section className={styles.formSection}>
+    <section className={styles.formSection} id="contact-form">
       <h2 className={styles.sectionTitle}>Parlami del tuo Progetto</h2>
       {hasErrors && (
         <div className={styles.containerError}>
@@ -40,7 +61,7 @@ export default function ContactForm() {
         </div>
       )}
       {!showSuccess && (
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={styles.form} onSubmit={handleFormSubmit}>
           <div className={styles.row}>
             <div className={styles.field}>
               <label className={styles.formLabel} htmlFor="name">
@@ -60,6 +81,7 @@ export default function ContactForm() {
                 field="name"
                 errors={state.errors}
               />
+              {nameError && <p className={styles.fieldError}>{nameError}</p>}
             </div>
             <div className={styles.field}>
               <label className={styles.formLabel} htmlFor="requestType">
@@ -144,6 +166,9 @@ export default function ContactForm() {
               field="message"
               errors={state.errors}
             />
+            {messageError && (
+              <p className={styles.fieldError}>{messageError}</p>
+            )}
           </div>
 
           <label className={styles.hidden} htmlFor="website">

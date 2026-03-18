@@ -12,7 +12,7 @@ export default function Footer() {
             <p className={styles.description}>
               Soluzioni professionali per vetrine e allestimenti.
             </p>
-            <Link href={"/contatti"} className={styles.info}>
+            <Link href="/contatti#contact-form" className={styles.info}>
               Richiedi Informazioni
               <span aria-hidden="true">
                 <ArrowRight aria-hidden="true" />
@@ -100,7 +100,7 @@ export default function Footer() {
             <div className={styles.companyLine}>
               <span>© 2026 Centro Vetrine</span>
               <span className={styles.divider} aria-hidden="true" />
-              <span>P.IVA 01234567890</span>
+              <span>P.IVA 00888560901</span>
             </div>
 
             <nav className={styles.legalNav} aria-label="Link legali">

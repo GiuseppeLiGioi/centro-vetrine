@@ -131,7 +131,7 @@ export default function ChiSiamo() {
           </p>
           <Link href="tel:+393284595823" className={styles.passionCtaButton}>
             <Phone />
-            <span className={styles.spanPhoneCta}>+39 328 4595823</span>
+            <span className={styles.spanPhoneCta}>Chiama Ora</span>
           </Link>
         </div>
       </section>

@@ -20,10 +20,9 @@ export default function PrivacyPolicy() {
             1. Titolare del trattamento
           </h2>
           <p className={styles.text}>
-            Il titolare del trattamento è{" "}
-            <strong>[RAGIONE SOCIALE / NOME ATTIVITÀ]</strong>, con sede in{" "}
-            <strong>Via Mameli 20, Olbia, 07026</strong>, P. IVA/C.F.{" "}
-            <strong>[P. IVA O C.F.]</strong>.
+            Il titolare del trattamento è <strong>Centro Vetrine SAS</strong>,
+            con sede in <strong>Via Mameli 20, Olbia, 07026</strong>, P. IVA{" "}
+            <strong>00888560901</strong>.
           </p>
           <p className={styles.text}>
             Per qualsiasi richiesta relativa al trattamento dei dati personali è
@@ -183,11 +182,6 @@ export default function PrivacyPolicy() {
             tempo strettamente necessario a gestire la richiesta ricevuta e per
             l’eventuale seguito amministrativo, commerciale o tecnico ad essa
             collegato, salvo ulteriori obblighi di legge.
-          </p>
-          <p className={styles.text}>
-            Se desideri indicare un criterio più puntuale, puoi sostituire
-            questo paragrafo con una formula specifica, ad esempio:{" "}
-            <strong>[INSERIRE PERIODO O CRITERIO DI CONSERVAZIONE]</strong>.
           </p>
         </section>
 
