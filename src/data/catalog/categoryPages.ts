@@ -153,8 +153,8 @@ export const categoryPages = {
   },
 
   vetrine: {
-    id: "vetrine",
-    slug: "/vetrine",
+    id: "vetrine-componibili",
+    slug: "/vetrine-componibili",
     title: "Vetrine",
     breadcrumbLabel: "Vetrine",
     hero: {
@@ -459,9 +459,9 @@ export const categoryPages = {
   },
 
   arredamentoUfficio: {
-    id: "arredamento-ufficio",
-    slug: "/arredamento-ufficio",
-    title: "Arredamento Ufficio",
+    id: "arredamento-uffici",
+    slug: "/arredamento-uffici",
+    title: "Arredamento Uffici",
     breadcrumbLabel: "Arredamento Ufficio",
     hero: {
       title: "Arredamento Ufficio",

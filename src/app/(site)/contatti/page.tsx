@@ -5,6 +5,13 @@ import ContactForm from "@/components/ui/ContactForm/ContactForm";
 import MapBanner from "@/components/ui/MapBanner/MapBanner";
 import { Phone, Mail } from "lucide-react";
 import { WHY_ITEMS, FAQ_ITEMS } from "@/data/contact/faqItems";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contatti | Centro Vetrine",
+  description:
+    "Contatta Centro Vetrine per informazioni su arredamento negozi, vetrine, manichini, espositori e allestimenti commerciali.",
+};
 export default function Contatti() {
   return (
     <Container className={styles.contactContainer}>

@@ -1,5 +1,12 @@
 import Container from "@/components/ui/Container/Container";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy | Centro Vetrine",
+  description:
+    "Leggi la Cookie Policy di Centro Vetrine per conoscere l'utilizzo dei cookie e delle tecnologie simili sul sito.",
+};
 
 export default function CookiePolicyPage() {
   return (

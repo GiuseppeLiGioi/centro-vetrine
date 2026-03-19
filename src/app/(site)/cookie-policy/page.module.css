@@ -96,7 +96,7 @@
   .legalPage {
     gap: var(--space-9);
     padding-top: var(--space-9);
-    padding-bottom: var(--space-12);
+    padding-bottom: var(--space-9);
   }
   .hero {
     gap: var(--space-4);
@@ -129,7 +129,7 @@
   .legalPage {
     gap: var(--space-10);
     padding-top: var(--space-10);
-    padding-bottom: var(--space-14);
+    padding-bottom: var(--space-10);
   }
   .hero {
     gap: var(--space-4);

@@ -8,6 +8,14 @@ import InfoCard from "@/components/ui/InfoCard/InfoCard";
 import { innovationCards } from "@/data/home/innovationCards";
 import { categories } from "@/data/home/categories";
 import { Phone, Mail, MoveRight } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Centro Vetrine | Arredamento negozi, vetrine e allestimenti in Sardegna",
+  description:
+    "Centro Vetrine realizza arredamento per negozi e uffici. Da noi troverai vetrine, manichini ed espositori con consulenza diretta e soluzioni su misura in Sardegna.",
+};
 export default function Home() {
   return (
     <Container className={styles.containerHome}>

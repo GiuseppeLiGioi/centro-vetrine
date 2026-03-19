@@ -5,12 +5,19 @@ import InfoCard from "@/components/ui/InfoCard/InfoCard";
 import ShopCard from "@/components/ui/ShopCard/ShopCard";
 import BrandCard from "@/components/ui/BrandCard/BrandCard";
 import Link from "next/link";
-import { Phone } from "lucide-react";
+import { Phone, MoveRight } from "lucide-react";
 import { PARTNER_BRANDS } from "@/data/about/BrandItem";
 import { OUR_WORKS } from "@/data/about/ourWork";
 import { HISTORY_ITEMS } from "@/data/about/historyItems";
 import HowWeWorkTimeline from "@/components/ui/HowWeWorkTimeline/HowWeWorkTimeline";
 import { IconCardItem } from "@/types/types";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Chi siamo | Centro Vetrine",
+  description:
+    "Scopri la storia di Centro Vetrine e il nostro approccio ad arredamento negozi, vetrine, manichini e allestimenti commerciali su misura.",
+};
 export default function ChiSiamo() {
   return (
     <Container className={styles.containerAbout}>
@@ -128,10 +135,19 @@ export default function ChiSiamo() {
           <p className={styles.passionCtaText}>
             Chiamaci e progettiamo arredi che attirano e convincono.
           </p>
-          <Link href="tel:+393284595823" className={styles.passionCtaButton}>
-            <Phone />
-            <span className={styles.spanPhoneCta}>Chiama Ora</span>
-          </Link>
+          <div className={styles.wrapperButtonsCta}>
+            <Link href="tel:+393284595823" className={styles.passionCtaButton}>
+              <Phone />
+              <span className={styles.spanPhoneCta}>Chiama Ora</span>
+            </Link>
+            <Link
+              href="/contatti#contact-form"
+              className={styles.passionCtaButtonContact}
+            >
+              <span className={styles.spanPhoneCta}>Richiedi Informazioni</span>
+              <MoveRight />
+            </Link>
+          </div>
         </div>
       </section>
     </Container>

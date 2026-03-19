@@ -6,6 +6,13 @@ import CategoryProcess from "@/components/ui/CategoryProcess/CategoryProcess";
 import CategoryFinalCta from "@/components/ui/CategoryFinalCta/CategoryFinalCta";
 import { categoryPages } from "@/data/catalog/categoryPages";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Arredamento negozi | Centro Vetrine",
+  description:
+    "Arredamento per negozi su misura, esposizione retail e consulenza per realizzare spazi commerciali funzionali, ordinati e professionali.",
+};
 export default function ArredamentoNegozi() {
   const pageData = categoryPages.arredamentoNegozi;
   return (

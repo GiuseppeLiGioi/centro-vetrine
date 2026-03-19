@@ -6,6 +6,13 @@ import CategoryProcess from "@/components/ui/CategoryProcess/CategoryProcess";
 import CategoryFinalCta from "@/components/ui/CategoryFinalCta/CategoryFinalCta";
 import { categoryPages } from "@/data/catalog/categoryPages";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Arredamento uffici | Centro Vetrine",
+  description:
+    "Soluzioni di arredamento per uffici pensate per unire funzionalità, ordine e coerenza estetica in ambienti professionali.",
+};
 export default function ArredamentoUffici() {
   const pageData = categoryPages.arredamentoUfficio;
   return (

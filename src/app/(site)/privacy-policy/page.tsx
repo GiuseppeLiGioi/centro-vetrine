@@ -1,6 +1,12 @@
 import Container from "@/components/ui/Container/Container";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Privacy Policy | Centro Vetrine",
+  description:
+    "Leggi la Privacy Policy di Centro Vetrine e scopri come vengono trattati i dati personali raccolti tramite il sito.",
+};
 export default function PrivacyPolicy() {
   return (
     <Container className={styles.legalPage}>

@@ -60,11 +60,12 @@
   background-color: var(--color-primary-hover);
   color: var(--color-text);
 }
-.navItem:hover .triggerIcon {
+.navItem:hover .triggerIcon,
+.navItem:focus-within .triggerIcon {
   color: var(--color-bg);
 }
 .subMenu {
-  display: none;
+  display: flex;
   position: absolute;
   top: 100%;
   left: 0;
@@ -78,9 +79,19 @@
   flex-direction: column;
   gap: var(--space-2);
   z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
-.navItem:hover .subMenu {
-  display: flex;
+.navItem:hover .subMenu,
+.navItem:focus-within .subMenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.navItem:focus-within .navTrigger {
+  background-color: var(--color-primary-soft);
+  color: var(--color-bg);
 }
 .childItem {
   display: inline-flex;
@@ -115,6 +126,12 @@
   height: 2px;
   border-radius: 999px;
   background-color: var(--color-primary);
+}
+.navTrigger:focus-visible,
+.voiceNavLg:focus-visible,
+.childItem:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
 }
 @media (min-width: 768px) {
   .navbarLg {

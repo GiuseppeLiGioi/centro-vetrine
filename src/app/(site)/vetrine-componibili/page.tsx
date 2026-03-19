@@ -6,6 +6,13 @@ import CategoryProcess from "@/components/ui/CategoryProcess/CategoryProcess";
 import CategoryFinalCta from "@/components/ui/CategoryFinalCta/CategoryFinalCta";
 import { categoryPages } from "@/data/catalog/categoryPages";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vetrine componibili | Centro Vetrine",
+  description:
+    "Vetrine componibili e soluzioni espositive per negozi: funzionalità, ordine visivo e supporto nella scelta delle configurazioni più adatte.",
+};
 export default function VetrineComponibili() {
   const pageData = categoryPages.vetrine;
   return (

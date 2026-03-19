@@ -39,7 +39,7 @@
   text-decoration: none;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
-  transition: color 0.2 ease;
+  transition: color 0.2s ease;
 }
 .btnHamburgher {
   display: inline-flex;

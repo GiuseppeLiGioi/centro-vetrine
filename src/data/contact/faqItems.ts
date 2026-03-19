@@ -4,7 +4,7 @@ export const WHY_ITEMS: IconCardItem[] = [
   {
     id: "esperienza-passione",
     title: "Esperienza e Passione",
-    text: "La nostra attività a Olbia prosegue da oltre 10 anni nel settore delle vetrine.",
+    text: "La nostra attività a Olbia prosegue da oltre 30 anni nel settore delle vetrine.",
     icon: Clock,
   },
   {

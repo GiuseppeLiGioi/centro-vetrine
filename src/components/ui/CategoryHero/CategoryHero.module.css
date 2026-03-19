@@ -136,7 +136,7 @@
 
   .content {
     max-width: 680px;
-    padding-top: var(--space-12);
+    padding-top: var(--space-10);
   }
 
   .categoryText {

@@ -6,6 +6,13 @@ import CategoryProcess from "@/components/ui/CategoryProcess/CategoryProcess";
 import CategoryFinalCta from "@/components/ui/CategoryFinalCta/CategoryFinalCta";
 import { categoryPages } from "@/data/catalog/categoryPages";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Complementi d'arredo | Centro Vetrine",
+  description:
+    "Complementi d'arredo e soluzioni accessorie per completare negozi, vetrine e spazi espositivi con equilibrio e funzionalità.",
+};
 export default function ComplementiArredo() {
   const pageData = categoryPages.complementiArredo;
   return (
