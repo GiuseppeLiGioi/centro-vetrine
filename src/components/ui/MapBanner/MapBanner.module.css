@@ -84,7 +84,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--color-primary);
+  color: var(--color-primary-soft);
   text-decoration: none;
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
@@ -97,14 +97,11 @@
   transition: color 0.2s ease;
 }
 .mapsLink:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-soft-hover);
 }
 .textMap {
   display: inline-block;
   transition: color 0.2s ease;
-}
-.textMap:hover {
-  color: var(--color-primary-hover);
 }
 @media (min-width: 768px) {
   .location {

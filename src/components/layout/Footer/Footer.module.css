@@ -55,7 +55,7 @@
   align-items: center;
   gap: var(--space-2);
   width: fit-content;
-  color: var(--color-primary);
+  color: var(--color-primary-soft);
   font-weight: var(--font-semibold);
   font-size: var(--text-md);
   line-height: 1.4;
@@ -72,7 +72,7 @@
   flex: 0 0 auto;
 }
 .info:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-soft-hover);
 }
 .navFooter,
 .contactsBox {
@@ -95,7 +95,7 @@
 }
 .navItem:hover,
 .contactA:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-soft-hover);
 }
 .contactA {
   display: inline-flex;
@@ -116,14 +116,14 @@
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  color: var(--color-primary);
+  color: var(--color-primary-soft);
   font-weight: var(--font-semibold);
   font-size: var(--text-md);
   line-height: 1.4;
   transition: color 0.2s ease;
 }
 .mapsA:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-soft-hover);
 }
 .legacy {
   border-top: 1px solid var(--color-border);

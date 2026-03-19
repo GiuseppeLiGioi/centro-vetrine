@@ -377,7 +377,7 @@
   transition: color 0.2s ease;
 }
 .finalCtaCardTitle:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-soft-hover);
 }
 .finalCtaCardText {
   margin: 0;
@@ -388,7 +388,7 @@
   transition: color 0.2s ease;
 }
 .finalCtaCardText:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-soft-hover);
 }
 @media (max-width: 440px) {
   .finalCtaCardText {
