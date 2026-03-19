@@ -1,13 +1,16 @@
 "use client";
+
 import styles from "./ContactForm.module.css";
 import { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { Send } from "lucide-react";
+
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm("mreajyap");
+  const [state, handleSubmit, reset] = useForm("mreajyap");
   const [showSuccess, setShowSuccess] = useState(false);
   const [nameError, setNameError] = useState("");
   const [messageError, setMessageError] = useState("");
+
   const hasErrors: boolean =
     Array.isArray(state.errors) &&
     state.errors.length > 0 &&
@@ -15,51 +18,61 @@ export default function ContactForm() {
     !state.submitting;
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    const formData = new FormData(event.currentTarget);
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
     const name = formData.get("name")?.toString().trim() || "";
     const message = formData.get("message")?.toString().trim() || "";
+    const website = formData.get("website")?.toString().trim() || "";
 
-    setNameError(name.length >= 3 ? "" : "Inserisci un nome valido.");
-    setMessageError(
+    const nextNameError = name.length >= 3 ? "" : "Inserisci un nome valido.";
+    const nextMessageError =
       message.length >= 10
         ? ""
-        : "Inserisci un messaggio di almeno 10 caratteri.",
-    );
+        : "Inserisci un messaggio di almeno 10 caratteri.";
 
-    if (name.length < 2 || message.length < 10) {
-      event.preventDefault();
-      return;
-    }
+    setNameError(nextNameError);
+    setMessageError(nextMessageError);
 
-    handleSubmit(event);
+    if (website) return;
+    if (nextNameError || nextMessageError) return;
+
+    void handleSubmit(event);
   };
 
   useEffect(() => {
     if (!state.succeeded) return;
 
     setShowSuccess(true);
+    setNameError("");
+    setMessageError("");
 
     const timer = setTimeout(() => {
       setShowSuccess(false);
-    }, 5000);
+      reset();
+    }, 4000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [state.succeeded]);
+  }, [state.succeeded, reset]);
 
   return (
     <section className={styles.formSection} id="contact-form">
       <h2 className={styles.sectionTitle}>Parlami del tuo Progetto</h2>
+
       {hasErrors && (
         <div className={styles.containerError}>
           <h3 className={styles.errorTitle}>Si è verificato un errore!</h3>
           <p className={styles.errorMessage}>
-            Si è verificato un errore durante l'invio. Controlla i campi
-            evidenziati e riprova!
+            Si è verificato un errore durante l&apos;invio. Controlla i campi
+            evidenziati e riprova.
           </p>
         </div>
       )}
+
       {!showSuccess && (
         <form className={styles.form} onSubmit={handleFormSubmit}>
           <div className={styles.row}>
@@ -83,6 +96,7 @@ export default function ContactForm() {
               />
               {nameError && <p className={styles.fieldError}>{nameError}</p>}
             </div>
+
             <div className={styles.field}>
               <label className={styles.formLabel} htmlFor="requestType">
                 Tipo di richiesta:
@@ -95,7 +109,7 @@ export default function ContactForm() {
                 defaultValue=""
               >
                 <option value="" disabled>
-                  Seleziona un'opzione
+                  Seleziona un&apos;opzione
                 </option>
                 <option value="informazioni">Informazioni generali</option>
                 <option value="preventivo">Preventivo</option>
@@ -110,6 +124,7 @@ export default function ContactForm() {
               />
             </div>
           </div>
+
           <div className={styles.row}>
             <div className={styles.field}>
               <label className={styles.formLabel} htmlFor="email">
@@ -140,7 +155,6 @@ export default function ContactForm() {
                 type="text"
                 name="object"
                 placeholder="Disponibilità Manichini"
-                autoComplete="object"
                 className={styles.input}
               />
               <ValidationError
@@ -201,7 +215,7 @@ export default function ContactForm() {
         <div className={styles.thanks} role="status">
           <h3 className={styles.thanksTitle}>Messaggio Ricevuto!</h3>
           <p className={styles.thanksMessage}>
-            Abbiamo ricevuto il tuo messaggio! Risponderemo il prima possibile!
+            Abbiamo ricevuto il tuo messaggio. Risponderemo il prima possibile.
           </p>
         </div>
       )}

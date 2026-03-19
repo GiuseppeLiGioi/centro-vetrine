@@ -13,7 +13,12 @@ export default function HowWeWorkTimeline() {
               </div>
               <div className={styles.stepCard}>
                 <div className={styles.stepCardLeft}>
-                  <Image src={item.image.src} alt={item.image.alt} fill />
+                  <Image
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    fill
+                    sizes="(max-width: 380px) 100vw, (max-width: 767px) 92px, (max-width: 1023px) 112px, 128px"
+                  />
                 </div>
                 <div className={styles.stepCardRight}>
                   <h3 className={styles.titleCard}>{item.title}</h3>

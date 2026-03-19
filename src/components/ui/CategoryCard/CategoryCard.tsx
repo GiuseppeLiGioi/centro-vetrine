@@ -18,6 +18,7 @@ export default function CategoryCard({ category }: CategoryCardProps) {
         src={category.image}
         alt={category.alt}
         fill
+        sizes="(max-width: 767px) 100vw, (max-width: 1439px) 50vw, 33vw"
         className={styles.image}
       />
       <div className={styles.overlay} />

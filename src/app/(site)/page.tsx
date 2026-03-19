@@ -24,6 +24,8 @@ export default function Home() {
           src="/manichino.png"
           alt="Foto principale del sito Centro Vetrine, negozio di arredamento negozi"
           fill
+          priority
+          sizes="100vw"
           className={styles.imageHero}
         />
         <div className={styles.overlay} />

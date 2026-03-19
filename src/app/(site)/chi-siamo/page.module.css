@@ -3,10 +3,10 @@
   margin: 0 auto;
   padding: var(--space-6) var(--container-spacing) 0;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
   gap: var(--space-8);
 }
+
 .hero {
   position: relative;
   width: 100%;
@@ -15,21 +15,27 @@
   align-items: flex-end;
   padding: var(--space-8) var(--container-spacing);
   overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
 }
+
 .image {
   object-fit: cover;
   object-position: center top;
 }
+
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
 }
+
 .content {
   position: relative;
   z-index: 1;
   max-width: 640px;
 }
+
 .title {
   margin: 0 0 var(--space-2);
   font-size: var(--text-2xl);
@@ -38,6 +44,7 @@
   text-transform: uppercase;
   color: var(--color-text);
 }
+
 .title::after {
   content: "";
   display: block;
@@ -46,6 +53,7 @@
   margin-top: var(--space-3);
   background-color: var(--color-primary);
 }
+
 .semiTitle {
   margin: 0;
   max-width: 60ch;
@@ -53,9 +61,11 @@
   line-height: 1.6;
   color: var(--color-text-muted);
 }
+
 .semiTitle strong {
   color: var(--color-text);
 }
+
 .ourHistory,
 .howWork,
 .ourWork,
@@ -70,10 +80,12 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
 }
+
 .ourHistory {
   align-items: center;
   text-align: center;
 }
+
 .sectionTitle,
 .topTitle {
   margin: 0 0 var(--space-2);
@@ -84,6 +96,7 @@
   letter-spacing: 1px;
   color: var(--color-primary);
 }
+
 .description,
 .topDescription {
   margin: 0;
@@ -92,14 +105,17 @@
   line-height: 1.7;
   color: var(--color-text-muted);
 }
+
 .topDescription {
   min-width: 80%;
   text-align: center;
 }
+
 .description strong,
 .topDescription strong {
   color: var(--color-text);
 }
+
 .topSection {
   display: flex;
   flex-direction: column;
@@ -114,35 +130,44 @@
   gap: var(--space-4);
   margin-top: var(--space-5);
 }
+
 .card {
   width: calc(50% - (var(--space-4) / 2));
   display: flex;
 }
+
 .card > article {
   width: 100%;
 }
+
 .shopCardList {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
 }
+
 .ourWork .shopCardList {
   align-items: stretch;
 }
+
 .ourWork .shopCardList > * {
   width: 100%;
 }
+
 .partnerBrands .shopCardList {
   justify-content: center;
 }
+
 .partnerBrands .shopCardList > * {
   width: calc(50% - (var(--space-4) / 2));
   display: flex;
 }
+
 .ourPassion {
   gap: var(--space-6);
   padding-bottom: var(--space-8);
 }
+
 .passionMedia {
   position: relative;
   min-height: 420px;
@@ -152,20 +177,24 @@
   overflow: hidden;
   border-radius: var(--radius-lg);
 }
+
 .passionImage {
   object-fit: cover;
   object-position: center center;
 }
+
 .passionOverlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
 }
+
 .passionContent {
   position: relative;
   z-index: 1;
   max-width: 600px;
 }
+
 .passionTitle {
   margin: 0 0 var(--space-3);
   font-size: var(--text-xl);
@@ -174,12 +203,14 @@
   text-transform: uppercase;
   color: var(--color-primary);
 }
+
 .passionText {
   margin: 0;
   font-size: var(--text-md);
   line-height: 1.7;
   color: var(--color-text-muted);
 }
+
 .passionCta {
   display: flex;
   flex-direction: column;
@@ -187,6 +218,7 @@
   justify-content: center;
   gap: var(--space-2);
 }
+
 .passionCtaTitle {
   margin: 0;
   font-size: var(--text-xl);
@@ -194,18 +226,21 @@
   line-height: 1.2;
   color: var(--color-text);
 }
+
 .passionCtaText {
   margin: 0;
   font-size: var(--text-md);
   line-height: 1.6;
   color: var(--color-text-muted);
 }
+
 .wrapperButtonsCta {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
   margin-top: var(--space-3);
 }
+
 .passionCtaButton {
   display: inline-flex;
   align-items: center;
@@ -223,6 +258,17 @@
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
+
+.passionCtaButton svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.passionCtaButton:hover {
+  background: var(--color-primary-hover);
+}
+
 .passionCtaButtonContact {
   display: inline-flex;
   align-items: center;
@@ -253,42 +299,42 @@
   background: var(--color-surface-light);
   border-color: var(--color-primary);
 }
-.passionCtaButton svg {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
-}
+
 .spanPhoneCta {
   display: inline-block;
 }
-.passionCtaButton:hover {
-  background: var(--color-primary-hover);
-}
+
 @media (max-width: 420px) {
   .card,
   .partnerBrands .shopCardList > * {
     width: 100%;
   }
 }
+
 @media (min-width: 768px) {
   .containerAbout {
     padding: var(--space-8) var(--container-spacing-md) 0;
   }
+
   .hero {
     padding: var(--space-9) var(--container-spacing-md);
   }
+
   .title {
     font-size: var(--text-3xl);
   }
+
   .semiTitle {
     font-size: var(--text-lg);
   }
+
   .sectionTitle,
   .topTitle,
   .passionTitle,
   .passionCtaTitle {
     font-size: var(--text-2xl);
   }
+
   .ourHistory,
   .howWork,
   .ourWork,
@@ -296,64 +342,84 @@
   .ourPassion {
     padding: var(--space-8) var(--space-7);
   }
+
   .cards,
   .shopCardList {
     gap: var(--space-5);
   }
+
   .card {
     width: calc(50% - (var(--space-5) / 2));
   }
+
   .ourWork .shopCardList > *:not(:first-child) {
     width: calc(50% - (var(--space-5) / 2));
   }
+
   .partnerBrands .shopCardList > * {
     width: calc(33.333% - ((var(--space-5) * 2) / 3));
   }
+
   .passionMedia {
     min-height: 500px;
     padding: var(--space-8);
   }
+
   .wrapperButtonsCta {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
   }
 }
+
 @media (min-width: 1024px) {
   .containerAbout {
     padding: var(--space-8) var(--container-spacing-lg) 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
+
   .image {
     object-position: 80% 25%;
   }
+
   .hero,
   .ourHistory,
   .ourWork,
   .ourPassion {
     width: 100%;
   }
+
   .howWork,
   .partnerBrands {
     width: calc(50% - (var(--space-8) / 2));
   }
+
   .cards {
     flex-wrap: nowrap;
   }
+
   .card {
     width: calc(25% - ((var(--space-5) * 3) / 4));
   }
+
   .ourWork .shopCardList > *:first-child {
     width: calc(50% - (var(--space-5) / 2));
   }
+
   .ourWork .shopCardList > *:nth-child(2) {
     width: calc(50% - (var(--space-5) / 2));
   }
+
   .ourWork .shopCardList > *:last-child {
     width: 100%;
   }
+
   .partnerBrands .shopCardList > * {
     width: calc(50% - (var(--space-5) / 2));
   }
+
   .passionMedia {
     min-height: 560px;
   }

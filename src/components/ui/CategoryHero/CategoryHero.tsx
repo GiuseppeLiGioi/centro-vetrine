@@ -19,7 +19,14 @@ export default function CategoryHero({ data }: CategoryHeroProps) {
 
   return (
     <div className={styles.hero}>
-      <Image src={src} alt={alt} fill className={styles.categoryImage} />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority
+        sizes="100vw"
+        className={styles.categoryImage}
+      />
       <div className={styles.overlay} />
 
       <div className={styles.breadcrumb}>

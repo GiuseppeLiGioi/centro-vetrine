@@ -13,7 +13,13 @@ export default function ShopCard({ shopName, city, image }: ShopCardProps) {
   return (
     <div className={styles.shopCard}>
       <div className={styles.imageWrapper}>
-        <Image src={image.src} className={styles.img} fill alt={image.alt} />
+        <Image
+          src={image.src}
+          className={styles.img}
+          fill
+          sizes="(max-width: 767px) 100vw, 50vw"
+          alt={image.alt}
+        />
         <div className={styles.infoWork}>
           <h4 className={styles.titleShop}>{shopName}</h4>
           <p className={styles.cityShop}>{city}</p>
