@@ -63,7 +63,7 @@
 }
 .titleCard {
   margin: 0;
-  color: var(--color-primary);
+  color: var(--color-primary-soft);
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
   line-height: 1.15;
