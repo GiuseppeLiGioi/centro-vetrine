@@ -3,9 +3,7 @@
   color: var(--color-text);
   z-index: 100;
 }
-.containerHeaderWide {
-  max-width: var(--container-header-max) !important;
-}
+
 .containerInnerHeader {
   display: flex;
   align-items: center;

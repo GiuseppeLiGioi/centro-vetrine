@@ -3,10 +3,7 @@
   color: var(--color-text);
   padding-block: var(--space-2);
 }
-.containerFooter,
-.containerFooterBottom {
-  max-width: var(--container-header-max);
-}
+
 .allBoxes {
   display: flex;
   flex-direction: column;

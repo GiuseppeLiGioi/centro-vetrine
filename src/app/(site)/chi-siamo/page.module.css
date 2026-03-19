@@ -1,5 +1,4 @@
 .containerAbout {
-  max-width: var(--container-header-max);
   margin: 0 auto;
   padding: var(--space-6) var(--container-spacing) 0;
   display: flex;
