@@ -27,11 +27,19 @@ export default function Header() {
             <Logo />
           </Link>
           <div className={styles.contactsMobile}>
-            <a href="tel:3284595823" className={styles.contactA}>
+            <a
+              href="tel:3284595823"
+              aria-label="Chiama Centro Vetrine al 328 4595 823"
+              className={styles.contactA}
+            >
               <Phone aria-hidden="true" />
               <span className={styles.contactSpan}>328 4595823</span>
             </a>
-            <a href="mailto:ligioimarco@gmail.com" className={styles.contactA}>
+            <a
+              href="mailto:ligioimarco@gmail.com"
+              aria-label="Scrivi a Centro Vetrine via email"
+              className={styles.contactA}
+            >
               <Mail aria-hidden="true" />
               <span className={styles.contactSpan}>ligioimarco@gmail.com</span>
             </a>
@@ -39,6 +47,13 @@ export default function Header() {
           <button
             className={styles.btnHamburgher}
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={
+              menuOpen
+                ? "Chiudi menu di navigazione"
+                : "Apri menu di navigazione"
+            }
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
           >
             <Menu />
           </button>

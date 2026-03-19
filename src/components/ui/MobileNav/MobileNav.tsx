@@ -22,7 +22,7 @@ export default function MobileNav({ onClose, items }: MobileNavProps) {
     onClose();
   };
   return (
-    <div className={styles.containerOuter}>
+    <div className={styles.containerOuter} id="mobile-navigation">
       <div className={styles.optionsNav}>
         <h4 className={styles.titleMenu}>CENTRO VETRINE</h4>
         <button className={styles.buttonClose} onClick={handleClose}>
