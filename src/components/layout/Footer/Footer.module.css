@@ -156,7 +156,7 @@
   transition: color 0.2s ease;
 }
 .legalLink:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-soft-hover);
 }
 .divider {
   display: none;
