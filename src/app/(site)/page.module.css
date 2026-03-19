@@ -198,13 +198,13 @@
   align-items: center;
   gap: var(--space-1);
   margin-left: var(--space-1);
-  color: var(--color-primary);
+  color: var(--color-primary-soft);
   font-weight: var(--font-medium);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 .contactUs:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-soft-hover);
 }
 .contactUs svg {
   width: 16px;

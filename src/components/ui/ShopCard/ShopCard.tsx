@@ -21,7 +21,7 @@ export default function ShopCard({ shopName, city, image }: ShopCardProps) {
           alt={image.alt}
         />
         <div className={styles.infoWork}>
-          <h4 className={styles.titleShop}>{shopName}</h4>
+          <h3 className={styles.titleShop}>{shopName}</h3>
           <p className={styles.cityShop}>{city}</p>
         </div>
       </div>

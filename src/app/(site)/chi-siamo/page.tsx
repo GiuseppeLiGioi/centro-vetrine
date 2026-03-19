@@ -44,7 +44,7 @@ export default function ChiSiamo() {
       </section>
 
       <section className={styles.ourHistory}>
-        <h1 className={styles.topTitle}>LA NOSTRA STORIA</h1>
+        <h2 className={styles.topTitle}>LA NOSTRA STORIA</h2>
         <p className={styles.topDescription}>
           Da oltre 30 anni, <strong>Centro Vetrine</strong> è il punto di
           riferimentoper l'arredamento di negozi a Olbia e in tutta la Sardegna.
